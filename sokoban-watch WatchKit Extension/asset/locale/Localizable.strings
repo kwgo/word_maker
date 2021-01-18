@@ -1,0 +1,73 @@
+/* 
+  Localizable.strings
+  sokoban_collection
+
+  Created by Rui Chang on 2021-01-02.
+  Copyright © 2021 JChip Games. All rights reserved.
+*/
+"app_name" = "Boxman";
+"game_start" = "START";
+"game_setting" = "OPTIONS";
+"game_help" = "HELP";
+"game_exit" = "EXIT";
+
+"game_select_saved" = "SELECT THE SAVE SLOT:";
+"game_erase_saved" = "SELECT THE SAVE SLOT TO ERASE:";
+"game_erase_confirm" = "ARE YOU SURE YOU WANT TO ERASE THIS SLOT?";
+"game_erase_yes" = "YES";
+"game_erase_no" = "NO";
+"game_erase_clot" = "ERASE A SLOT";
+"game_slot0" = "2 BOX 0/88";
+"game_slot1" = "3 BOX 0/88";
+"game_slot2" = "4 BOX 0/88";
+"game_slot3" = "5 BOX 0/88";
+"game_slot4" = "6 BOX 0/88";
+"game_return" = "RETURN";
+
+"game_resume" = "RESUME";
+"game_restart" = "RESTART";
+"game_answer" = "SOLUTION";
+"game_select_level" = "SELECT";
+"game_return_menu" = "MAIN MENU";
+
+"game_title_bar" = "%d : %d : %d";
+"game_success_congratulation" = "Congratulations!";
+"game_success_review" = "REVIEW";
+"game_success_next" = "NEXT LEVEL";
+
+"game_answer_info" = "WATCH AN AD TO SEE ANSWER OF LEVEL %d?";
+"game_answer_ok" = "WATCH";
+
+"review_title" = "WILL YOU LEAVE A REVIEW FOR US?";
+"review_yes" = "RATE US";
+"review_no" = "NEXT TIME";
+
+"setting_sound_on" = "SOUND ON";
+"setting_sound_off" = "SOUND OFF";
+"setting_music_on" = "MUSIC ON";
+"setting_music_off" = "MUSIC OFF";
+"setting_floor_on" = "FLOOR ON";
+"setting_floor_off" = "FLOOR  OFF";
+"setting_dpad_on" = "D-PAD ON";
+"setting_dpad_off" = "D-PAD OFF";
+"setting_title_on" = "TITLE ON";
+"setting_title_off" = "TITLE OFF";
+
+"help_header_move" = "MOVE (Tap)";
+"help_header_push" = "PUSH (Long Press)";
+"help_header_undo" = "UNDO (Double Tap)";
+"help_header_menu" = "ACCESS MENU";
+"help_header_title" = "SHOW TITLE";
+"help_header_review" = "SHOW REVIEW";
+"help_header_about" = "ABOUT";
+
+"help_detail_move" = "Tap an empty floor tile to move, tap or press on the d-pad.";
+"help_detail_push" = "Long press on an empty floor tile.";
+"help_detail_undo" = "Double tap, or sÏwipe to the left.";
+"help_detail_menu" = "Swipe to the right or press the back button.";
+"help_detail_title" = "Swipe to the bottom.";
+"help_detail_review" = "Swipe to the top.";
+"help_detail_about" = "Sokoban Boxman\nby JChip Games.\njchipgame@gmail.com";
+
+"help_signin_process" = "Please sign in App Store.";
+

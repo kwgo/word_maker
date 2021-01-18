@@ -11,10 +11,62 @@
 		B150E8B025B4A4F300C215F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B150E8AF25B4A4F300C215F3 /* Assets.xcassets */; };
 		B150E8B725B4A4F300C215F3 /* sokoban-watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B150E8B625B4A4F300C215F3 /* sokoban-watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B150E8BC25B4A4F300C215F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8BB25B4A4F300C215F3 /* ContentView.swift */; };
-		B150E8BE25B4A4F300C215F3 /* sokoban_watchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8BD25B4A4F300C215F3 /* sokoban_watchApp.swift */; };
+		B150E8BE25B4A4F300C215F3 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8BD25B4A4F300C215F3 /* App.swift */; };
 		B150E8C025B4A4F300C215F3 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8BF25B4A4F300C215F3 /* ComplicationController.swift */; };
 		B150E8C225B4A4F400C215F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B150E8C125B4A4F400C215F3 /* Assets.xcassets */; };
 		B150E8C525B4A4F400C215F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B150E8C425B4A4F400C215F3 /* Preview Assets.xcassets */; };
+		B150E90525B4A9D800C215F3 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8E725B4A9D700C215F3 /* TitleView.swift */; };
+		B150E90625B4A9D800C215F3 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8E825B4A9D700C215F3 /* ReviewView.swift */; };
+		B150E90725B4A9D800C215F3 /* DpadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8E925B4A9D700C215F3 /* DpadView.swift */; };
+		B150E90825B4A9D800C215F3 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8EB25B4A9D700C215F3 /* ArrowView.swift */; };
+		B150E90925B4A9D800C215F3 /* DimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8EC25B4A9D700C215F3 /* DimeView.swift */; };
+		B150E90A25B4A9D800C215F3 /* GridStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8ED25B4A9D700C215F3 /* GridStack.swift */; };
+		B150E90B25B4A9D800C215F3 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8EE25B4A9D700C215F3 /* TextView.swift */; };
+		B150E90C25B4A9D800C215F3 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8EF25B4A9D700C215F3 /* ImageView.swift */; };
+		B150E90D25B4A9D800C215F3 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8F025B4A9D700C215F3 /* GridView.swift */; };
+		B150E90E25B4A9D800C215F3 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8F125B4A9D700C215F3 /* ButtonView.swift */; };
+		B150E90F25B4A9D800C215F3 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8F225B4A9D700C215F3 /* LabelView.swift */; };
+		B150E91025B4A9D800C215F3 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8F425B4A9D800C215F3 /* GameView.swift */; };
+		B150E91125B4A9D800C215F3 /* GameSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8F525B4A9D800C215F3 /* GameSlot.swift */; };
+		B150E91225B4A9D800C215F3 /* GameLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8F625B4A9D800C215F3 /* GameLoader.swift */; };
+		B150E91325B4A9D800C215F3 /* GameOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8F725B4A9D800C215F3 /* GameOption.swift */; };
+		B150E91425B4A9D800C215F3 /* GameStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8F825B4A9D800C215F3 /* GameStage.swift */; };
+		B150E91525B4A9D800C215F3 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8F925B4A9D800C215F3 /* GameHelper.swift */; };
+		B150E91625B4A9D800C215F3 /* GameAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8FA25B4A9D800C215F3 /* GameAction.swift */; };
+		B150E91725B4A9D800C215F3 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8FB25B4A9D800C215F3 /* GameState.swift */; };
+		B150E91825B4A9D800C215F3 /* GameImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8FC25B4A9D800C215F3 /* GameImage.swift */; };
+		B150E91925B4A9D800C215F3 /* GameControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8FD25B4A9D800C215F3 /* GameControl.swift */; };
+		B150E91A25B4A9D800C215F3 /* GameSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E8FE25B4A9D800C215F3 /* GameSetting.swift */; };
+		B150E91B25B4A9D800C215F3 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E90025B4A9D800C215F3 /* Track.swift */; };
+		B150E91C25B4A9D800C215F3 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E90125B4A9D800C215F3 /* Unit.swift */; };
+		B150E91D25B4A9D800C215F3 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E90225B4A9D800C215F3 /* Point.swift */; };
+		B150E91E25B4A9D800C215F3 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E90325B4A9D800C215F3 /* Step.swift */; };
+		B150E91F25B4A9D800C215F3 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E90425B4A9D800C215F3 /* Atomic.swift */; };
+		B150E93625B4AC5400C215F3 /* Aldrich-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B150E92B25B4AC5400C215F3 /* Aldrich-Regular.ttf */; };
+		B150E93725B4AC5400C215F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B150E92D25B4AC5400C215F3 /* Localizable.strings */; };
+		B150E93825B4AC5400C215F3 /* game_2x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B150E92F25B4AC5400C215F3 /* game_2x88.json */; };
+		B150E93925B4AC5400C215F3 /* game_3x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B150E93025B4AC5400C215F3 /* game_3x88.json */; };
+		B150E93A25B4AC5400C215F3 /* game_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B150E93125B4AC5400C215F3 /* game_music.mp3 */; };
+		B150E93B25B4AC5400C215F3 /* game_6x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B150E93225B4AC5400C215F3 /* game_6x88.json */; };
+		B150E93C25B4AC5400C215F3 /* game_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = B150E93325B4AC5400C215F3 /* game_sound.wav */; };
+		B150E93D25B4AC5400C215F3 /* game_5x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B150E93425B4AC5400C215F3 /* game_5x88.json */; };
+		B150E93E25B4AC5400C215F3 /* game_4x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B150E93525B4AC5400C215F3 /* game_4x88.json */; };
+		B150E95125B4ACA500C215F3 /* BasicActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E94625B4ACA500C215F3 /* BasicActivity.swift */; };
+		B150E95225B4ACA500C215F3 /* MainActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E94725B4ACA500C215F3 /* MainActivity.swift */; };
+		B150E95325B4ACA500C215F3 /* HelpActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E94825B4ACA500C215F3 /* HelpActivity.swift */; };
+		B150E95425B4ACA500C215F3 /* SlotActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E94925B4ACA500C215F3 /* SlotActivity.swift */; };
+		B150E95525B4ACA500C215F3 /* RateActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E94A25B4ACA500C215F3 /* RateActivity.swift */; };
+		B150E95625B4ACA500C215F3 /* SuccessActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E94B25B4ACA500C215F3 /* SuccessActivity.swift */; };
+		B150E95725B4ACA500C215F3 /* GameActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E94C25B4ACA500C215F3 /* GameActivity.swift */; };
+		B150E95825B4ACA500C215F3 /* SettingActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E94D25B4ACA500C215F3 /* SettingActivity.swift */; };
+		B150E95925B4ACA500C215F3 /* SelectActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E94E25B4ACA500C215F3 /* SelectActivity.swift */; };
+		B150E95A25B4ACA500C215F3 /* MenuActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E94F25B4ACA500C215F3 /* MenuActivity.swift */; };
+		B150E95B25B4ACA500C215F3 /* AnswerActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E95025B4ACA500C215F3 /* AnswerActivity.swift */; };
+		B150E96A25B4ACDE00C215F3 /* GameLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E96325B4ACDE00C215F3 /* GameLogger.swift */; };
+		B150E96B25B4ACDE00C215F3 /* GameSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E96425B4ACDE00C215F3 /* GameSound.swift */; };
+		B150E96D25B4ACDE00C215F3 /* GameUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E96625B4ACDE00C215F3 /* GameUtil.swift */; };
+		B150E96E25B4ACDE00C215F3 /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E96725B4ACDE00C215F3 /* GameTimer.swift */; };
+		B150E97025B4ACDE00C215F3 /* GameBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E96925B4ACDE00C215F3 /* GameBilling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,17 +112,69 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B150E8A625B4A4F100C215F3 /* sokoban-watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sokoban-watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B150E8A625B4A4F100C215F3 /* Boxman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boxman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B150E8AA25B4A4F200C215F3 /* sokoban-watch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sokoban-watch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B150E8AF25B4A4F300C215F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B150E8B125B4A4F300C215F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B150E8B625B4A4F300C215F3 /* sokoban-watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "sokoban-watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B150E8BB25B4A4F300C215F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B150E8BD25B4A4F300C215F3 /* sokoban_watchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sokoban_watchApp.swift; sourceTree = "<group>"; };
+		B150E8BD25B4A4F300C215F3 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		B150E8BF25B4A4F300C215F3 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		B150E8C125B4A4F400C215F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B150E8C425B4A4F400C215F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B150E8C625B4A4F400C215F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B150E8E725B4A9D700C215F3 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		B150E8E825B4A9D700C215F3 /* ReviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		B150E8E925B4A9D700C215F3 /* DpadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DpadView.swift; sourceTree = "<group>"; };
+		B150E8EB25B4A9D700C215F3 /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
+		B150E8EC25B4A9D700C215F3 /* DimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimeView.swift; sourceTree = "<group>"; };
+		B150E8ED25B4A9D700C215F3 /* GridStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridStack.swift; sourceTree = "<group>"; };
+		B150E8EE25B4A9D700C215F3 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		B150E8EF25B4A9D700C215F3 /* ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		B150E8F025B4A9D700C215F3 /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		B150E8F125B4A9D700C215F3 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		B150E8F225B4A9D700C215F3 /* LabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		B150E8F425B4A9D800C215F3 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		B150E8F525B4A9D800C215F3 /* GameSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSlot.swift; sourceTree = "<group>"; };
+		B150E8F625B4A9D800C215F3 /* GameLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLoader.swift; sourceTree = "<group>"; };
+		B150E8F725B4A9D800C215F3 /* GameOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOption.swift; sourceTree = "<group>"; };
+		B150E8F825B4A9D800C215F3 /* GameStage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStage.swift; sourceTree = "<group>"; };
+		B150E8F925B4A9D800C215F3 /* GameHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
+		B150E8FA25B4A9D800C215F3 /* GameAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameAction.swift; sourceTree = "<group>"; };
+		B150E8FB25B4A9D800C215F3 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		B150E8FC25B4A9D800C215F3 /* GameImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameImage.swift; sourceTree = "<group>"; };
+		B150E8FD25B4A9D800C215F3 /* GameControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameControl.swift; sourceTree = "<group>"; };
+		B150E8FE25B4A9D800C215F3 /* GameSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSetting.swift; sourceTree = "<group>"; };
+		B150E90025B4A9D800C215F3 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		B150E90125B4A9D800C215F3 /* Unit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		B150E90225B4A9D800C215F3 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		B150E90325B4A9D800C215F3 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		B150E90425B4A9D800C215F3 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
+		B150E92B25B4AC5400C215F3 /* Aldrich-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aldrich-Regular.ttf"; sourceTree = "<group>"; };
+		B150E92D25B4AC5400C215F3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		B150E92F25B4AC5400C215F3 /* game_2x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_2x88.json; sourceTree = "<group>"; };
+		B150E93025B4AC5400C215F3 /* game_3x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_3x88.json; sourceTree = "<group>"; };
+		B150E93125B4AC5400C215F3 /* game_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_music.mp3; sourceTree = "<group>"; };
+		B150E93225B4AC5400C215F3 /* game_6x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_6x88.json; sourceTree = "<group>"; };
+		B150E93325B4AC5400C215F3 /* game_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = game_sound.wav; sourceTree = "<group>"; };
+		B150E93425B4AC5400C215F3 /* game_5x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_5x88.json; sourceTree = "<group>"; };
+		B150E93525B4AC5400C215F3 /* game_4x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_4x88.json; sourceTree = "<group>"; };
+		B150E94625B4ACA500C215F3 /* BasicActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicActivity.swift; sourceTree = "<group>"; };
+		B150E94725B4ACA500C215F3 /* MainActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainActivity.swift; sourceTree = "<group>"; };
+		B150E94825B4ACA500C215F3 /* HelpActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpActivity.swift; sourceTree = "<group>"; };
+		B150E94925B4ACA500C215F3 /* SlotActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotActivity.swift; sourceTree = "<group>"; };
+		B150E94A25B4ACA500C215F3 /* RateActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateActivity.swift; sourceTree = "<group>"; };
+		B150E94B25B4ACA500C215F3 /* SuccessActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessActivity.swift; sourceTree = "<group>"; };
+		B150E94C25B4ACA500C215F3 /* GameActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameActivity.swift; sourceTree = "<group>"; };
+		B150E94D25B4ACA500C215F3 /* SettingActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingActivity.swift; sourceTree = "<group>"; };
+		B150E94E25B4ACA500C215F3 /* SelectActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectActivity.swift; sourceTree = "<group>"; };
+		B150E94F25B4ACA500C215F3 /* MenuActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuActivity.swift; sourceTree = "<group>"; };
+		B150E95025B4ACA500C215F3 /* AnswerActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerActivity.swift; sourceTree = "<group>"; };
+		B150E96325B4ACDE00C215F3 /* GameLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLogger.swift; sourceTree = "<group>"; };
+		B150E96425B4ACDE00C215F3 /* GameSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSound.swift; sourceTree = "<group>"; };
+		B150E96625B4ACDE00C215F3 /* GameUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameUtil.swift; sourceTree = "<group>"; };
+		B150E96725B4ACDE00C215F3 /* GameTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
+		B150E96925B4ACDE00C215F3 /* GameBilling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBilling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +200,7 @@
 		B150E8A725B4A4F100C215F3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B150E8A625B4A4F100C215F3 /* sokoban-watch.app */,
+				B150E8A625B4A4F100C215F3 /* Boxman.app */,
 				B150E8AA25B4A4F200C215F3 /* sokoban-watch WatchKit App.app */,
 				B150E8B625B4A4F300C215F3 /* sokoban-watch WatchKit Extension.appex */,
 			);
@@ -115,8 +219,10 @@
 		B150E8BA25B4A4F300C215F3 /* sokoban-watch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B150E92625B4AB0800C215F3 /* asset */,
+				B150E8D825B4A79F00C215F3 /* app */,
+				B150E8BD25B4A4F300C215F3 /* App.swift */,
 				B150E8BB25B4A4F300C215F3 /* ContentView.swift */,
-				B150E8BD25B4A4F300C215F3 /* sokoban_watchApp.swift */,
 				B150E8BF25B4A4F300C215F3 /* ComplicationController.swift */,
 				B150E8C125B4A4F400C215F3 /* Assets.xcassets */,
 				B150E8C625B4A4F400C215F3 /* Info.plist */,
@@ -131,6 +237,144 @@
 				B150E8C425B4A4F400C215F3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B150E8D825B4A79F00C215F3 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				B150E96225B4ACDE00C215F3 /* common */,
+				B150E94525B4ACA500C215F3 /* activity */,
+				B150E8FF25B4A9D800C215F3 /* unit */,
+				B150E8F325B4A9D700C215F3 /* game */,
+				B150E8E625B4A9D700C215F3 /* view */,
+				B150E8EA25B4A9D700C215F3 /* control */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		B150E8E625B4A9D700C215F3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B150E8E725B4A9D700C215F3 /* TitleView.swift */,
+				B150E8E825B4A9D700C215F3 /* ReviewView.swift */,
+				B150E8E925B4A9D700C215F3 /* DpadView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B150E8EA25B4A9D700C215F3 /* control */ = {
+			isa = PBXGroup;
+			children = (
+				B150E8EB25B4A9D700C215F3 /* ArrowView.swift */,
+				B150E8EC25B4A9D700C215F3 /* DimeView.swift */,
+				B150E8ED25B4A9D700C215F3 /* GridStack.swift */,
+				B150E8EE25B4A9D700C215F3 /* TextView.swift */,
+				B150E8EF25B4A9D700C215F3 /* ImageView.swift */,
+				B150E8F025B4A9D700C215F3 /* GridView.swift */,
+				B150E8F125B4A9D700C215F3 /* ButtonView.swift */,
+				B150E8F225B4A9D700C215F3 /* LabelView.swift */,
+			);
+			path = control;
+			sourceTree = "<group>";
+		};
+		B150E8F325B4A9D700C215F3 /* game */ = {
+			isa = PBXGroup;
+			children = (
+				B150E8F425B4A9D800C215F3 /* GameView.swift */,
+				B150E8F525B4A9D800C215F3 /* GameSlot.swift */,
+				B150E8F625B4A9D800C215F3 /* GameLoader.swift */,
+				B150E8F725B4A9D800C215F3 /* GameOption.swift */,
+				B150E8F825B4A9D800C215F3 /* GameStage.swift */,
+				B150E8F925B4A9D800C215F3 /* GameHelper.swift */,
+				B150E8FA25B4A9D800C215F3 /* GameAction.swift */,
+				B150E8FB25B4A9D800C215F3 /* GameState.swift */,
+				B150E8FC25B4A9D800C215F3 /* GameImage.swift */,
+				B150E8FD25B4A9D800C215F3 /* GameControl.swift */,
+				B150E8FE25B4A9D800C215F3 /* GameSetting.swift */,
+			);
+			path = game;
+			sourceTree = "<group>";
+		};
+		B150E8FF25B4A9D800C215F3 /* unit */ = {
+			isa = PBXGroup;
+			children = (
+				B150E90025B4A9D800C215F3 /* Track.swift */,
+				B150E90125B4A9D800C215F3 /* Unit.swift */,
+				B150E90225B4A9D800C215F3 /* Point.swift */,
+				B150E90325B4A9D800C215F3 /* Step.swift */,
+				B150E90425B4A9D800C215F3 /* Atomic.swift */,
+			);
+			path = unit;
+			sourceTree = "<group>";
+		};
+		B150E92625B4AB0800C215F3 /* asset */ = {
+			isa = PBXGroup;
+			children = (
+				B150E92E25B4AC5400C215F3 /* media */,
+				B150E92C25B4AC5400C215F3 /* locale */,
+				B150E92A25B4AC5400C215F3 /* font */,
+			);
+			path = asset;
+			sourceTree = "<group>";
+		};
+		B150E92A25B4AC5400C215F3 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				B150E92B25B4AC5400C215F3 /* Aldrich-Regular.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		B150E92C25B4AC5400C215F3 /* locale */ = {
+			isa = PBXGroup;
+			children = (
+				B150E92D25B4AC5400C215F3 /* Localizable.strings */,
+			);
+			path = locale;
+			sourceTree = "<group>";
+		};
+		B150E92E25B4AC5400C215F3 /* media */ = {
+			isa = PBXGroup;
+			children = (
+				B150E92F25B4AC5400C215F3 /* game_2x88.json */,
+				B150E93025B4AC5400C215F3 /* game_3x88.json */,
+				B150E93125B4AC5400C215F3 /* game_music.mp3 */,
+				B150E93225B4AC5400C215F3 /* game_6x88.json */,
+				B150E93325B4AC5400C215F3 /* game_sound.wav */,
+				B150E93425B4AC5400C215F3 /* game_5x88.json */,
+				B150E93525B4AC5400C215F3 /* game_4x88.json */,
+			);
+			path = media;
+			sourceTree = "<group>";
+		};
+		B150E94525B4ACA500C215F3 /* activity */ = {
+			isa = PBXGroup;
+			children = (
+				B150E94625B4ACA500C215F3 /* BasicActivity.swift */,
+				B150E94725B4ACA500C215F3 /* MainActivity.swift */,
+				B150E94825B4ACA500C215F3 /* HelpActivity.swift */,
+				B150E94925B4ACA500C215F3 /* SlotActivity.swift */,
+				B150E94A25B4ACA500C215F3 /* RateActivity.swift */,
+				B150E94B25B4ACA500C215F3 /* SuccessActivity.swift */,
+				B150E94C25B4ACA500C215F3 /* GameActivity.swift */,
+				B150E94D25B4ACA500C215F3 /* SettingActivity.swift */,
+				B150E94E25B4ACA500C215F3 /* SelectActivity.swift */,
+				B150E94F25B4ACA500C215F3 /* MenuActivity.swift */,
+				B150E95025B4ACA500C215F3 /* AnswerActivity.swift */,
+			);
+			path = activity;
+			sourceTree = "<group>";
+		};
+		B150E96225B4ACDE00C215F3 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				B150E96325B4ACDE00C215F3 /* GameLogger.swift */,
+				B150E96425B4ACDE00C215F3 /* GameSound.swift */,
+				B150E96625B4ACDE00C215F3 /* GameUtil.swift */,
+				B150E96725B4ACDE00C215F3 /* GameTimer.swift */,
+				B150E96925B4ACDE00C215F3 /* GameBilling.swift */,
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +394,7 @@
 			);
 			name = "sokoban-watch";
 			productName = "sokoban-watch";
-			productReference = B150E8A625B4A4F100C215F3 /* sokoban-watch.app */;
+			productReference = B150E8A625B4A4F100C215F3 /* Boxman.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
 		};
 		B150E8A925B4A4F200C215F3 /* sokoban-watch WatchKit App */ = {
@@ -248,6 +492,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B150E8C525B4A4F400C215F3 /* Preview Assets.xcassets in Resources */,
+				B150E93A25B4AC5400C215F3 /* game_music.mp3 in Resources */,
+				B150E93D25B4AC5400C215F3 /* game_5x88.json in Resources */,
+				B150E93E25B4AC5400C215F3 /* game_4x88.json in Resources */,
+				B150E93C25B4AC5400C215F3 /* game_sound.wav in Resources */,
+				B150E93725B4AC5400C215F3 /* Localizable.strings in Resources */,
+				B150E93825B4AC5400C215F3 /* game_2x88.json in Resources */,
+				B150E93625B4AC5400C215F3 /* Aldrich-Regular.ttf in Resources */,
+				B150E93B25B4AC5400C215F3 /* game_6x88.json in Resources */,
+				B150E93925B4AC5400C215F3 /* game_3x88.json in Resources */,
 				B150E8C225B4A4F400C215F3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +512,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B150E90625B4A9D800C215F3 /* ReviewView.swift in Sources */,
+				B150E96B25B4ACDE00C215F3 /* GameSound.swift in Sources */,
+				B150E95B25B4ACA500C215F3 /* AnswerActivity.swift in Sources */,
+				B150E91625B4A9D800C215F3 /* GameAction.swift in Sources */,
+				B150E95525B4ACA500C215F3 /* RateActivity.swift in Sources */,
+				B150E91825B4A9D800C215F3 /* GameImage.swift in Sources */,
+				B150E91C25B4A9D800C215F3 /* Unit.swift in Sources */,
+				B150E97025B4ACDE00C215F3 /* GameBilling.swift in Sources */,
+				B150E91F25B4A9D800C215F3 /* Atomic.swift in Sources */,
+				B150E95625B4ACA500C215F3 /* SuccessActivity.swift in Sources */,
+				B150E91D25B4A9D800C215F3 /* Point.swift in Sources */,
+				B150E96D25B4ACDE00C215F3 /* GameUtil.swift in Sources */,
 				B150E8BC25B4A4F300C215F3 /* ContentView.swift in Sources */,
-				B150E8BE25B4A4F300C215F3 /* sokoban_watchApp.swift in Sources */,
+				B150E91A25B4A9D800C215F3 /* GameSetting.swift in Sources */,
+				B150E96A25B4ACDE00C215F3 /* GameLogger.swift in Sources */,
+				B150E90A25B4A9D800C215F3 /* GridStack.swift in Sources */,
+				B150E8BE25B4A4F300C215F3 /* App.swift in Sources */,
+				B150E95325B4ACA500C215F3 /* HelpActivity.swift in Sources */,
+				B150E91025B4A9D800C215F3 /* GameView.swift in Sources */,
+				B150E91525B4A9D800C215F3 /* GameHelper.swift in Sources */,
+				B150E91125B4A9D800C215F3 /* GameSlot.swift in Sources */,
+				B150E91325B4A9D800C215F3 /* GameOption.swift in Sources */,
+				B150E95725B4ACA500C215F3 /* GameActivity.swift in Sources */,
+				B150E90C25B4A9D800C215F3 /* ImageView.swift in Sources */,
+				B150E90925B4A9D800C215F3 /* DimeView.swift in Sources */,
+				B150E95925B4ACA500C215F3 /* SelectActivity.swift in Sources */,
+				B150E90725B4A9D800C215F3 /* DpadView.swift in Sources */,
+				B150E95125B4ACA500C215F3 /* BasicActivity.swift in Sources */,
+				B150E91425B4A9D800C215F3 /* GameStage.swift in Sources */,
+				B150E95425B4ACA500C215F3 /* SlotActivity.swift in Sources */,
 				B150E8C025B4A4F300C215F3 /* ComplicationController.swift in Sources */,
+				B150E91E25B4A9D800C215F3 /* Step.swift in Sources */,
+				B150E91925B4A9D800C215F3 /* GameControl.swift in Sources */,
+				B150E90825B4A9D800C215F3 /* ArrowView.swift in Sources */,
+				B150E90F25B4A9D800C215F3 /* LabelView.swift in Sources */,
+				B150E91225B4A9D800C215F3 /* GameLoader.swift in Sources */,
+				B150E90E25B4A9D800C215F3 /* ButtonView.swift in Sources */,
+				B150E90525B4A9D800C215F3 /* TitleView.swift in Sources */,
+				B150E90D25B4A9D800C215F3 /* GridView.swift in Sources */,
+				B150E91B25B4A9D800C215F3 /* Track.swift in Sources */,
+				B150E90B25B4A9D800C215F3 /* TextView.swift in Sources */,
+				B150E91725B4A9D800C215F3 /* GameState.swift in Sources */,
+				B150E95225B4ACA500C215F3 /* MainActivity.swift in Sources */,
+				B150E95825B4ACA500C215F3 /* SettingActivity.swift in Sources */,
+				B150E95A25B4ACA500C215F3 /* MenuActivity.swift in Sources */,
+				B150E96E25B4ACDE00C215F3 /* GameTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +695,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"sokoban-watch WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 54NHYSS93S;
 				ENABLE_PREVIEWS = YES;
@@ -411,6 +708,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jchip.sokoban-watch.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "Sokoban Boxman Watch KitExtension Provision";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -423,7 +721,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"sokoban-watch WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 54NHYSS93S;
 				ENABLE_PREVIEWS = YES;
@@ -435,6 +734,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jchip.sokoban-watch.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "Sokoban Boxman Watch KitExtension Provision";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -449,12 +749,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 54NHYSS93S;
 				IBSC_MODULE = sokoban_watch_WatchKit_Extension;
 				INFOPLIST_FILE = "sokoban-watch WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jchip.sokoban-watch.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Sokoban Boxman Watch KitApp Provision";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -469,12 +771,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 54NHYSS93S;
 				IBSC_MODULE = sokoban_watch_WatchKit_Extension;
 				INFOPLIST_FILE = "sokoban-watch WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jchip.sokoban-watch.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Sokoban Boxman Watch KitApp Provision";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -486,12 +790,14 @@
 		B150E8D225B4A4F400C215F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 54NHYSS93S;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jchip.sokoban-watch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Boxman;
+				PROVISIONING_PROFILE_SPECIFIER = "Sokoban Boxman Watch Provision";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -499,12 +805,14 @@
 		B150E8D325B4A4F400C215F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 54NHYSS93S;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jchip.sokoban-watch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Boxman;
+				PROVISIONING_PROFILE_SPECIFIER = "Sokoban Boxman Watch Provision";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
