@@ -10,8 +10,14 @@ import Foundation
 
 public class GameSlot: Codable {
     
-    public static let GAME_SLOT_FILE = "sokoban_collection_slot%d.json"
-    public static let GAME_SLOT_GROUP_FILE = "sokoban_collection_slot.json"
+    public static let GAME_SLOT_FILE = "sokoban_watch_slot%d.json"
+    public static let GAME_SLOT_GROUP_FILE = "sokoban_watch_slot.json"
+
+//    static public let CURRENT_LEVEL = "currentLevel"
+//    static public let LIMITED_LEVEL = "limitedLevel"
+//    static public let LEVEL_INDEX = "levelIndex"
+//    static public let LEVEL_TRACK = "levelTrack"
+//    static public let LEVEL_ANSWER = "levelAnswer"
     
     private static var gameSlot = GameSlot()
     private static var gameSlotGroup = GameSlotGroup()
@@ -40,7 +46,8 @@ public class GameSlot: Codable {
         
         GameOption.instance().setCurrentLevel(currentLevel: 0)
         GameOption.instance().setLimitedLevel(limitedLevel: 0)
-        
+        GameOption.instance().setLimitedLevel(limitedLevel: GameOption.instance().getCurrentLevel())
+
         self.setCurrentLevel(currentLevel: 0)
         self.setLimitedLevel(limitedLevel: 0)
         self.setLevelTrack(levelTrack: [String]())
@@ -187,7 +194,7 @@ public class GameSlot: Codable {
             self.currentSlot = GameOption.instance().getCurrentSlot()
             let currentLevel = GameOption.instance().getCurrentLevel()
             
-            self.slotDetails[self.currentSlot] = "game_slot\(currentSlot)".localized.replacingOccurrences(of: "0/88", with: "\(currentLevel + 1)/88")
+            self.slotDetails[self.currentSlot] = "game_slot\(currentSlot)".localized.replacingOccurrences(of: "-0", with: "-\(currentLevel + 1)")
 
             if let encodedData = try? JSONEncoder().encode(self) {
                 do {

@@ -14,8 +14,8 @@ struct SlotActivity: View {
     static let BUTTON_SPACING = CGFloat(8)
     static let BUTTON_HEIGHT = CGFloat(55)
     #else
-    static let BUTTON_SPACING = CGFloat(2)
-    static let BUTTON_HEIGHT = CGFloat(30)
+    static let BUTTON_SPACING = CGFloat(4)
+    static let BUTTON_HEIGHT = CGFloat(32)
     #endif
     
     @State var showSelect = true
@@ -41,9 +41,6 @@ struct SlotActivity: View {
                         }
                         ButtonView(title: self.getSlotTitle(slot: 2), color: self.getSlotColor(slot: 2), height: SlotActivity.BUTTON_HEIGHT) {
                             self.onGameStart(slot: 2)
-                        }
-                        ButtonView(title: self.getSlotTitle(slot: 3), color: self.getSlotColor(slot: 3), height: SlotActivity.BUTTON_HEIGHT) {
-                            self.onGameStart(slot: 3)
                         }
                         ButtonView(title: "game_return".localized, height: SlotActivity.BUTTON_HEIGHT) {
                             self.content.startActivity(activity: "main")

@@ -34,8 +34,10 @@ public class Stage: Codable {
 
 public class GameLoader: Codable {
     
-    public static let GAME_STAGE_FILE = "game_%dx88"
-    
+    public static let GAME_SLOT_0_FILE = "game_2x3x88"
+    public static let GAME_SLOT_1_FILE = "game_3x4x88"
+    public static let GAME_SLOT_2_FILE = "game_5x6x88"
+
     private static var gameLoader = GameLoader()
     
     private init() {
@@ -53,8 +55,8 @@ public class GameLoader: Codable {
     }
     
     func loadStage() -> Bool {
-        let currentSlot = GameOption.instance().getCurrentSlot()
-        let file = String(format: GameLoader.GAME_STAGE_FILE, currentSlot + 2)
+        let slot = GameOption.instance().getCurrentSlot()
+        let file = slot == 0 ? GameLoader.GAME_SLOT_0_FILE : (slot == 1 ? GameLoader.GAME_SLOT_1_FILE : GameLoader.GAME_SLOT_2_FILE);
         let url = Bundle.main.url(forResource: file, withExtension: "json")
         
         stages = [Stage]()

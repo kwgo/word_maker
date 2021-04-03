@@ -74,7 +74,8 @@ struct SelectActivity: View {
     func getButtonColor(row: Int, column: Int) -> Color {
         let gameOption = GameOption.instance()
         let currentLevel = gameOption.getCurrentLevel()
-        let limitedLevel = gameOption.getLimitedLevel()
+        //let limitedLevel = gameOption.getLimitedLevel()
+        let limitedLevel = gameOption.getStageNumber()
         let selectedLevel = self.getSelectedLevel(row: row, column: column)
         if (selectedLevel == currentLevel) {
             return Color.white
@@ -86,13 +87,15 @@ struct SelectActivity: View {
     
     func onSelectButton(row: Int, column: Int) {
         let gameOption = GameOption.instance()
+        let limitedLevel = gameOption.getStageNumber()
         let selectedLevel = self.getSelectedLevel(row: row, column: column)
-        if (selectedLevel >= 0 && selectedLevel <= gameOption.getLimitedLevel()) {
+        if (selectedLevel >= 0 && selectedLevel <= limitedLevel) {
             self.content.showSelectFlag = false
             if (selectedLevel != gameOption.getCurrentLevel()) {
+                gameOption.setLimitedLevel(limitedLevel: selectedLevel)
                 self.content.saveGameStage()
                 self.content.loadGameStage(level: selectedLevel)
-            }
+           }
         }
     }
 }

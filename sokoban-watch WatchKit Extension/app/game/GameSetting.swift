@@ -8,7 +8,7 @@
 import Foundation
 
 public class GameSetting : Codable {
-    public static let GAME_SETTING_FILE = "sokoban_collection_setting.json"
+    public static let GAME_SETTING_FILE = "sokoban_watch_setting.json"
     
     private static var gameSetting: GameSetting = GameSetting()
     

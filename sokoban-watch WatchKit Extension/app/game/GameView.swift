@@ -70,6 +70,7 @@ struct GameView: View {
         }
         .onAppear {
             self.doAction(point: nil, action: GameControl.Action.REDO, singleStep: false, animate: false)
+            self.checkGameSuccess(pop: false);
         }
         .onDisappear {
             self.stopAnimation.value = true
@@ -153,14 +154,19 @@ struct GameView: View {
         _ = GameSlot.instance().saveSlot()
     }
     
-    func checkGameSuccess() {
+    func checkGameSuccess(pop : Bool = true) {
         let gameOption = GameOption.instance()
+        GameLogger.debug("checkGameSuccess pop= ", pop)
+        GameLogger.debug("checkGameSuccess level= ", gameOption.getCurrentLevel())
+        GameLogger.debug("checkGameSuccess limit= ", gameOption.getLimitedLevel())
         if (gameOption.getCurrentLevel() == gameOption.getLimitedLevel()
             && gameOption.getCurrentLevel() < GameStage.STAGE_NUMBER - 1) {
             if (game.isGameSuccess()) {
                 gameOption.setLimitedLevel(limitedLevel: gameOption.getCurrentLevel() + 1)
                 self.saveGameStage()
-                GameUtil.runOnUiThread( execute: DispatchWorkItem { self.showSuccessFlag = true })
+                if(pop) {
+                    GameUtil.runOnUiThread( execute: DispatchWorkItem { self.showSuccessFlag = true })
+                }
             }
         }
     }

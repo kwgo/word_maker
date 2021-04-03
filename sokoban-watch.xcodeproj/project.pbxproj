@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B10CBC6B26176CCB00A09573 /* game_3x4x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B10CBC6826176CCB00A09573 /* game_3x4x88.json */; };
+		B10CBC6C26176CCB00A09573 /* game_2x3x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B10CBC6926176CCB00A09573 /* game_2x3x88.json */; };
+		B10CBC6D26176CCB00A09573 /* game_5x6x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B10CBC6A26176CCB00A09573 /* game_5x6x88.json */; };
 		B150E8AB25B4A4F200C215F3 /* sokoban-watch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B150E8AA25B4A4F200C215F3 /* sokoban-watch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B150E8B025B4A4F300C215F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B150E8AF25B4A4F300C215F3 /* Assets.xcassets */; };
 		B150E8B725B4A4F300C215F3 /* sokoban-watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B150E8B625B4A4F300C215F3 /* sokoban-watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -44,13 +47,8 @@
 		B150E91F25B4A9D800C215F3 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E90425B4A9D800C215F3 /* Atomic.swift */; };
 		B150E93625B4AC5400C215F3 /* Aldrich-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B150E92B25B4AC5400C215F3 /* Aldrich-Regular.ttf */; };
 		B150E93725B4AC5400C215F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B150E92D25B4AC5400C215F3 /* Localizable.strings */; };
-		B150E93825B4AC5400C215F3 /* game_2x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B150E92F25B4AC5400C215F3 /* game_2x88.json */; };
-		B150E93925B4AC5400C215F3 /* game_3x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B150E93025B4AC5400C215F3 /* game_3x88.json */; };
 		B150E93A25B4AC5400C215F3 /* game_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B150E93125B4AC5400C215F3 /* game_music.mp3 */; };
-		B150E93B25B4AC5400C215F3 /* game_6x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B150E93225B4AC5400C215F3 /* game_6x88.json */; };
 		B150E93C25B4AC5400C215F3 /* game_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = B150E93325B4AC5400C215F3 /* game_sound.wav */; };
-		B150E93D25B4AC5400C215F3 /* game_5x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B150E93425B4AC5400C215F3 /* game_5x88.json */; };
-		B150E93E25B4AC5400C215F3 /* game_4x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B150E93525B4AC5400C215F3 /* game_4x88.json */; };
 		B150E95125B4ACA500C215F3 /* BasicActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E94625B4ACA500C215F3 /* BasicActivity.swift */; };
 		B150E95225B4ACA500C215F3 /* MainActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E94725B4ACA500C215F3 /* MainActivity.swift */; };
 		B150E95325B4ACA500C215F3 /* HelpActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150E94825B4ACA500C215F3 /* HelpActivity.swift */; };
@@ -112,6 +110,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B10CBC6826176CCB00A09573 /* game_3x4x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_3x4x88.json; sourceTree = "<group>"; };
+		B10CBC6926176CCB00A09573 /* game_2x3x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_2x3x88.json; sourceTree = "<group>"; };
+		B10CBC6A26176CCB00A09573 /* game_5x6x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_5x6x88.json; sourceTree = "<group>"; };
 		B150E8A625B4A4F100C215F3 /* Boxman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boxman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B150E8AA25B4A4F200C215F3 /* sokoban-watch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sokoban-watch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B150E8AF25B4A4F300C215F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,13 +153,8 @@
 		B150E90425B4A9D800C215F3 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		B150E92B25B4AC5400C215F3 /* Aldrich-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aldrich-Regular.ttf"; sourceTree = "<group>"; };
 		B150E92D25B4AC5400C215F3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		B150E92F25B4AC5400C215F3 /* game_2x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_2x88.json; sourceTree = "<group>"; };
-		B150E93025B4AC5400C215F3 /* game_3x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_3x88.json; sourceTree = "<group>"; };
 		B150E93125B4AC5400C215F3 /* game_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_music.mp3; sourceTree = "<group>"; };
-		B150E93225B4AC5400C215F3 /* game_6x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_6x88.json; sourceTree = "<group>"; };
 		B150E93325B4AC5400C215F3 /* game_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = game_sound.wav; sourceTree = "<group>"; };
-		B150E93425B4AC5400C215F3 /* game_5x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_5x88.json; sourceTree = "<group>"; };
-		B150E93525B4AC5400C215F3 /* game_4x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_4x88.json; sourceTree = "<group>"; };
 		B150E94625B4ACA500C215F3 /* BasicActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicActivity.swift; sourceTree = "<group>"; };
 		B150E94725B4ACA500C215F3 /* MainActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainActivity.swift; sourceTree = "<group>"; };
 		B150E94825B4ACA500C215F3 /* HelpActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpActivity.swift; sourceTree = "<group>"; };
@@ -336,13 +332,11 @@
 		B150E92E25B4AC5400C215F3 /* media */ = {
 			isa = PBXGroup;
 			children = (
-				B150E92F25B4AC5400C215F3 /* game_2x88.json */,
-				B150E93025B4AC5400C215F3 /* game_3x88.json */,
+				B10CBC6926176CCB00A09573 /* game_2x3x88.json */,
+				B10CBC6826176CCB00A09573 /* game_3x4x88.json */,
+				B10CBC6A26176CCB00A09573 /* game_5x6x88.json */,
 				B150E93125B4AC5400C215F3 /* game_music.mp3 */,
-				B150E93225B4AC5400C215F3 /* game_6x88.json */,
 				B150E93325B4AC5400C215F3 /* game_sound.wav */,
-				B150E93425B4AC5400C215F3 /* game_5x88.json */,
-				B150E93525B4AC5400C215F3 /* game_4x88.json */,
 			);
 			path = media;
 			sourceTree = "<group>";
@@ -491,16 +485,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B10CBC6B26176CCB00A09573 /* game_3x4x88.json in Resources */,
 				B150E8C525B4A4F400C215F3 /* Preview Assets.xcassets in Resources */,
 				B150E93A25B4AC5400C215F3 /* game_music.mp3 in Resources */,
-				B150E93D25B4AC5400C215F3 /* game_5x88.json in Resources */,
-				B150E93E25B4AC5400C215F3 /* game_4x88.json in Resources */,
 				B150E93C25B4AC5400C215F3 /* game_sound.wav in Resources */,
 				B150E93725B4AC5400C215F3 /* Localizable.strings in Resources */,
-				B150E93825B4AC5400C215F3 /* game_2x88.json in Resources */,
 				B150E93625B4AC5400C215F3 /* Aldrich-Regular.ttf in Resources */,
-				B150E93B25B4AC5400C215F3 /* game_6x88.json in Resources */,
-				B150E93925B4AC5400C215F3 /* game_3x88.json in Resources */,
+				B10CBC6D26176CCB00A09573 /* game_5x6x88.json in Resources */,
+				B10CBC6C26176CCB00A09573 /* game_2x3x88.json in Resources */,
 				B150E8C225B4A4F400C215F3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -792,9 +784,9 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 54NHYSS93S;
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jchip.sokoban-watch";
 				PRODUCT_NAME = Boxman;
 				PROVISIONING_PROFILE_SPECIFIER = "Sokoban Boxman Watch Provision";
@@ -807,9 +799,9 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 54NHYSS93S;
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jchip.sokoban-watch";
 				PRODUCT_NAME = Boxman;
 				PROVISIONING_PROFILE_SPECIFIER = "Sokoban Boxman Watch Provision";

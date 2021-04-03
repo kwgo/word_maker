@@ -11,12 +11,6 @@ import Foundation
 
 public class GameOption {
     
-    static public let CURRENT_LEVEL = "currentLevel"
-    static public let LIMITED_LEVEL = "limitedLevel"
-    static public let LEVEL_INDEX = "levelIndex"
-    static public let LEVEL_TRACK = "levelTrack"
-    static public let LEVEL_ANSWER = "levelAnswer"
-    
     private static var gameOption = GameOption()
     
     private var stageMap = [String]()

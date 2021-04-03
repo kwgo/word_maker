@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   sokoban_collection
 
@@ -17,11 +17,9 @@
 "game_erase_yes" = "YES";
 "game_erase_no" = "NO";
 "game_erase_clot" = "ERASE A SLOT";
-"game_slot0" = "2 BOX 0/88";
-"game_slot1" = "3 BOX 0/88";
-"game_slot2" = "4 BOX 0/88";
-"game_slot3" = "5 BOX 0/88";
-"game_slot4" = "6 BOX 0/88";
+"game_slot0" = "2-3 BOX-0";
+"game_slot1" = "3-4 BOX-0";
+"game_slot2" = "5-6 BOX-0";
 "game_return" = "RETURN";
 
 "game_resume" = "RESUME";
