@@ -12,7 +12,7 @@ struct MainView: View {
         
     var body: some View {
         VStack() {
-            GameView(word: "3456789", action: self.doAction)
+            WordView(word: "3456789", action: self.doAction)
         }
     }
     

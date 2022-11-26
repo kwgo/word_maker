@@ -9,18 +9,14 @@ import SwiftUI
 
 struct LetterView: View {
     var letter: String
+    var tapped: Bool
     var color: Color
     var size: CGFloat
-    var action: (String) -> Void?
+    //var action: (String) -> Void?
     
-    @State var tappedColor = Color.clear
-
-    
-    @State var circleTapped = false
-    @State var circlePressed = false
+    @State var pressed = false
 
     var body: some View {
-        let color = self.getColor()
         ZStack {
             Rectangle()
                 .foregroundColor(Color.clear)
@@ -29,42 +25,42 @@ struct LetterView: View {
             
             ZStack {
                 Text(self.letter)
-                //.foregroundColor(circlePressed ? Color.white : Color.detailColor)
+                //.foregroundColor(pressed ? Color.white : Color.detailColor)
                     .frame(alignment: .center)
                 //.font(.system(size: 38, weight: .regular))
                     .font(Font.custom("Aldrich", size: 40))
-                    .offset(x: circlePressed ? -90 : 0, y: circlePressed ? -90 : 0)
-                    .rotation3DEffect(Angle(degrees: circlePressed ? 20 : 0), axis: (x: 10, y: -10, z: 0))
+                    .offset(x: pressed ? -90 : 0, y: pressed ? -90 : 0)
+                    .rotation3DEffect(Angle(degrees: pressed ? 20 : 0), axis: (x: 10, y: -10, z: 0))
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: -8, trailing: 0))
             }
             .frame(width: self.size, height: self.size)
             .background(
                 ZStack {
                     Circle()
-                        .fill(circleTapped ? color : Color.background)
+                        .fill(self.tapped ? self.color : Color.background)
                         .frame(width: self.size - 10, height: self.size - 10)
                         .shadow(color: Color.lightShadow, radius: 2, x: -2, y: -2)
                         .shadow(color: Color.darkShadow, radius: 2, x: 2, y: 2)
                 }
             )
-            .scaleEffect(circleTapped ? 1.2 : 1)
+            .scaleEffect(self.tapped ? 1.2 : 1)
             
             
-            .onTapGesture(count: 1) {
-                print("letter=", self.letter)
-                if(!self.circleTapped) {
-                    self.tappedColor = self.color
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                        self.action(self.letter)
-                    }
-                }
-                self.circleTapped = true
-            }
+//            .onTapGesture(count: 1) {
+//                print("letter=", self.letter)
+//                if(!self.tapped) {
+//                    self.tapped = self.color
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+//                        self.action(self.letter)
+//                    }
+//                }
+//                self.tapped = true
+//            }
         }
     }
 
     
-    func getColor() -> Color {
-        return self.circleTapped ? self.tappedColor : self.color
-    }
+//    func getColor() -> Color {
+//        return self.tapped ? self.tapped : self.color
+//    }
 }
