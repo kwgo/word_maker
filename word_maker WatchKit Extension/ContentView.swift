@@ -79,6 +79,10 @@ extension String {
     func isNumber() -> Bool {
         return CharacterSet(charactersIn: self).isSubset(of: CharacterSet.decimalDigits)
     }
+
+    func isCharacter() -> Bool {
+        return CharacterSet(charactersIn: self).isSubset(of: CharacterSet.letters)
+    }
 }
 
 extension Color {
@@ -109,14 +113,20 @@ struct ContentView: View {
                 .resizable()
             
             VStack {
-                HStack {
-                    Image("game_title")
-                        .renderingMode(.original)
-                        .resizable()
-                        .frame(width: 100, height: 50, alignment: .leading)
-                        .padding(0)
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
+                //HStack {
+                  //  Image(systemName: "arrow.left")
+                   //     .padding(18)
+                    
+                    TitleView(content: self, view: self.view, word: self.word)
+               //     .frame( height: 50, alignment: .leading)
+
+//                    Image("game_title")
+//                        .renderingMode(.original)
+//                        .resizable()
+                        //.frame(width: 200, height: 50, alignment: .leading)
+//                        .padding(0)
+                //}
+               // .frame( height: 50, alignment: .leading)
                 
                 Spacer()
                 
@@ -129,7 +139,7 @@ struct ContentView: View {
                         ResultView(content: self, word: self.word, resultWord: self.resultWord)
                     }
                 }
-                .frame(alignment: .bottom)
+              //  .frame(alignment: .bottom)
             }
         }
         .edgesIgnoringSafeArea(.all)

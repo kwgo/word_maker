@@ -38,6 +38,11 @@ struct WordView: View {
                                         }
                                     }
                                 }
+                                .onLongPressGesture(minimumDuration: 0.1) {
+                                    if(letters[index].isCharacter()) {
+                                        self.action("long press")
+                                    }
+                                }
                         }
                     }
                     .padding(0)

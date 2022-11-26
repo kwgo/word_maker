@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct GameView: View {
-    var content : ContentView
-
+    var content: ContentView
+    
     var word: String
     
     @State var resultWord = ""
-
+    
     var body: some View {
         VStack() {
             WordView(word: self.getShuffledWord(), action: self.doAction)
@@ -21,11 +21,16 @@ struct GameView: View {
     }
     
     func doAction(letter: String) {
-        print("word letter=", letter)
-        self.resultWord.append(contentsOf: letter)
+        print("letter= =", letter)
+        if("long press" == letter) {
+            print("cc long pressyyyy")
 
-        if(self.resultWord.count == self.word.count) {
-            self.content.startView(view: "result", word: self.word, resultWord: self.resultWord)
+            self.content.startView(view: "result", word: self.word, resultWord: "[" + self.word + "]")
+        } else {
+            self.resultWord.append(contentsOf: letter)            
+            if(self.resultWord.count == self.word.count) {
+                self.content.startView(view: "result", word: self.word, resultWord: self.resultWord)
+            }
         }
     }
     func getShuffledWord() -> String {

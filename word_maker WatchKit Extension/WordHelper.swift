@@ -44,6 +44,10 @@ public class WordHelper {
         return self.wordIndex
     }
     
+    public func getWordCount() -> Int {
+        return self.words[self.bookIndex].count
+    }
+    
     public func setWordIndex(_ wordIndex: Int) {
         self.wordIndex = wordIndex
     }

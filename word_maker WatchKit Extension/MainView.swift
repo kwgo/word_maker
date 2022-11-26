@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
-    var content : ContentView
-        
+    var content: ContentView
+    
     var body: some View {
         VStack() {
             WordView(word: "3456789", action: self.doAction)
@@ -17,14 +17,13 @@ struct MainView: View {
     }
     
     func doAction(letter: String) {
-        print("letter=", letter)
-        let index = Int(letter)! - 3
-        
-        WordHelper.instance().setBookIndex(index)
-        
-        let word = WordHelper.instance().getWord()
-        self.content.startView(view: "game", word: word)        
+        if(letter.isNumber()) {
+            let index = Int(letter)! - 3
+            WordHelper.instance().setBookIndex(index)
+            let word = WordHelper.instance().getWord()
+            self.content.startView(view: "game", word: word)
+        }
     }
-
+    
 }
 

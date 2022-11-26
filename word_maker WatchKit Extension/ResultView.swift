@@ -18,7 +18,7 @@ struct ResultView: View {
         VStack {
             Text(self.resultWord)
                 .frame(alignment: .center)
-                .font(Font.custom("Aldrich", size: 40))
+                .font(Font.custom("Aldrich", size: self.resultWord.count < 9 ? 40 : self.resultWord.count == 9 ? 36 : 32))
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: -8, trailing: 0))
             
             Image(success ? "game_success" : "game_fail")

@@ -26,6 +26,7 @@
 		D097D46729325E1600D7F3E7 /* word_7.txt in Resources */ = {isa = PBXBuildFile; fileRef = D097D46029325E1600D7F3E7 /* word_7.txt */; };
 		D097D46929325EB000D7F3E7 /* WordHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D097D46829325EB000D7F3E7 /* WordHelper.swift */; };
 		D097D46B29326D1000D7F3E7 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D097D46A29326D1000D7F3E7 /* ResultView.swift */; };
+		D097D46D2932929E00D7F3E7 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D097D46C2932929E00D7F3E7 /* TitleView.swift */; };
 		D0AB76AD29319D6B0035C3C6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AB76AC29319D6B0035C3C6 /* MainView.swift */; };
 		D0AB76AF2931A2ED0035C3C6 /* LetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AB76AE2931A2ED0035C3C6 /* LetterView.swift */; };
 		D0AB76B12931A36D0035C3C6 /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AB76B02931A36D0035C3C6 /* WordView.swift */; };
@@ -97,6 +98,7 @@
 		D097D46029325E1600D7F3E7 /* word_7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = word_7.txt; sourceTree = "<group>"; };
 		D097D46829325EB000D7F3E7 /* WordHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordHelper.swift; sourceTree = "<group>"; };
 		D097D46A29326D1000D7F3E7 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		D097D46C2932929E00D7F3E7 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		D0AB76AC29319D6B0035C3C6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D0AB76AE2931A2ED0035C3C6 /* LetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterView.swift; sourceTree = "<group>"; };
 		D0AB76B02931A36D0035C3C6 /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				D0AB76B22931DFEB0035C3C6 /* GameView.swift */,
 				D097D46829325EB000D7F3E7 /* WordHelper.swift */,
 				D097D46A29326D1000D7F3E7 /* ResultView.swift */,
+				D097D46C2932929E00D7F3E7 /* TitleView.swift */,
 			);
 			path = "word_maker WatchKit Extension";
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				D0AB76AF2931A2ED0035C3C6 /* LetterView.swift in Sources */,
 				D0AB76B32931DFEB0035C3C6 /* GameView.swift in Sources */,
 				D097D46929325EB000D7F3E7 /* WordHelper.swift in Sources */,
+				D097D46D2932929E00D7F3E7 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
