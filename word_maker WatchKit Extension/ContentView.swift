@@ -79,21 +79,23 @@ extension String {
     func isNumber() -> Bool {
         return CharacterSet(charactersIn: self).isSubset(of: CharacterSet.decimalDigits)
     }
-
-    func isCharacter() -> Bool {
+    
+    func isLetter() -> Bool {
         return CharacterSet(charactersIn: self).isSubset(of: CharacterSet.letters)
     }
 }
 
 extension Color {
-    public static var detailColor: Color { return Color(0xd5883c) }
     init(_ hex: Int, opacity: Double = 1.0) {
         let red = Double((hex & 0xff0000) >> 16) / 255.0
         let green = Double((hex & 0xff00) >> 8) / 255.0
         let blue = Double((hex & 0xff) >> 0) / 255.0
         self.init(.sRGB, red: red, green: green, blue: blue, opacity: opacity)
     }
-    
+
+    public static var detailColor: Color { return Color(0xd5883c) }
+
+    public static var titleColor: Color { return Color(red: 0.745, green: 0.796, blue: 0.847) }
     //    public static var background: Color { return Color(red: 0.871, green: 0.918, blue: 0.965) }
     //    public static var lightShadow: Color { return Color(red: 0.953, green: 0.976, blue: 1.0) }
     //    public static var darkShadow: Color { return Color(red: 0.745, green: 0.796, blue: 0.847) }
@@ -113,20 +115,7 @@ struct ContentView: View {
                 .resizable()
             
             VStack {
-                //HStack {
-                  //  Image(systemName: "arrow.left")
-                   //     .padding(18)
-                    
-                    TitleView(content: self, view: self.view, word: self.word)
-               //     .frame( height: 50, alignment: .leading)
-
-//                    Image("game_title")
-//                        .renderingMode(.original)
-//                        .resizable()
-                        //.frame(width: 200, height: 50, alignment: .leading)
-//                        .padding(0)
-                //}
-               // .frame( height: 50, alignment: .leading)
+                TitleView(content: self, view: self.view, word: self.word)
                 
                 Spacer()
                 
@@ -139,7 +128,6 @@ struct ContentView: View {
                         ResultView(content: self, word: self.word, resultWord: self.resultWord)
                     }
                 }
-              //  .frame(alignment: .bottom)
             }
         }
         .edgesIgnoringSafeArea(.all)
@@ -151,5 +139,4 @@ struct ContentView: View {
         self.word = word
         self.resultWord = resultWord
     }
-    
 }

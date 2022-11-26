@@ -21,7 +21,6 @@ public class WordHelper {
     }
     
     private init() {
-        print("word help init ========")
         for index in 3-3 ... 9-3 {
             let lines = self.loadWords(index: index)
             self.words[index] = lines

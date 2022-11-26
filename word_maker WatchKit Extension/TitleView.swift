@@ -19,18 +19,17 @@ struct TitleView: View {
                     VStack {
                         Text("Make")
                             .font(Font.custom("Aldrich", size: 36))
-                            .foregroundColor(Color.gray)
+                            .foregroundColor(Color.titleColor)
                             .padding(.leading, 10)
-                            .padding(.top, 20)
+                            .padding(.top, 16)
                         Text("a Word")
                             .font(Font.custom("Aldrich", size: 30))
                             .foregroundColor(Color.detailColor)
                             .padding(.leading, 60)
-                            .padding(.top, -20)
+                            .padding(.top, -16)
                     }
                 } else if "game" == self.view {
                     HStack {
-                        //  Spacer(length: 15)
                         Image(systemName: "arrow.left")
                             .font(.system(size: 20))
                             .padding(.leading, 10)
@@ -52,13 +51,12 @@ struct TitleView: View {
             Spacer()
         }
         .frame( height: 50, alignment: .leading)
-        
     }
     
     func getTitle() -> String {
-        var title = "W"
+        var title = "L"
         title.append(String(WordHelper.instance().getBookIndex() + 3))
-        title.append(" ")
+        title.append("-")
         title.append(String(WordHelper.instance().getWordIndex() + 1))
         title.append("/")
         title.append(String(WordHelper.instance().getWordCount() + 0))

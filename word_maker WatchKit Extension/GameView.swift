@@ -21,10 +21,7 @@ struct GameView: View {
     }
     
     func doAction(letter: String) {
-        print("letter= =", letter)
-        if("long press" == letter) {
-            print("cc long pressyyyy")
-
+        if("[HINT]" == letter) {
             self.content.startView(view: "result", word: self.word, resultWord: "[HINT]")
         } else {
             self.resultWord.append(contentsOf: letter)            

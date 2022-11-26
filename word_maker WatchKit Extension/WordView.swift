@@ -39,8 +39,8 @@ struct WordView: View {
                                     }
                                 }
                                 .onLongPressGesture(minimumDuration: 0.1) {
-                                    if(letters[index].isCharacter()) {
-                                        self.action("long press")
+                                    if(letters[index].isLetter()) {
+                                        self.action("[HINT]")
                                     }
                                 }
                         }
