@@ -16,10 +16,14 @@ struct MainView: View {
         }
     }
     
-    
-    func doAction(word: String) {
-        print("word=", word)
-  
+    func doAction(letter: String) {
+        print("letter=", letter)
+        let index = Int(letter)! - 3
+        
+        WordHelper.instance().setBookIndex(index)
+        
+        let word = WordHelper.instance().getWord()
+        self.content.startView(view: "game", word: word)        
     }
 
 }

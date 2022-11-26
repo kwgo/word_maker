@@ -91,8 +91,10 @@ extension Color {
 }
 
 struct ContentView: View {
-    @State var activity = "main"
-    
+    @State var view = "main"
+    @State var word = ""
+    @State var resultWord = ""
+
     var body: some View {
         ZStack {
             Image("game_background")
@@ -108,13 +110,15 @@ struct ContentView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 
-                //    Spacer()
+                Spacer()
                 
                 Group {
-                    if "main" == self.activity {
+                    if "main" == self.view {
                         MainView(content: self)
-                    } else if "game" == self.activity {
-                        //          GameView(content: self)
+                    } else if "game" == self.view {
+                        GameView(content: self, word: self.word)
+                    } else if "result" == self.view {
+                        ResultView(content: self, word: self.word, resultWord: self.resultWord)
                     }
                 }
                 .frame(alignment: .bottom)
@@ -124,14 +128,10 @@ struct ContentView: View {
         .navigationBarHidden(true)
     }
     
-    func startActivity(activity:String) {
-        self.activity = activity
-    }
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+    func startView(view: String, word: String, resultWord: String = "") {
+        self.view = view
+        self.word = word
+        self.resultWord = resultWord
     }
     
 }

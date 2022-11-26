@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B10CBC6B26176CCB00A09573 /* game_3x4x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B10CBC6826176CCB00A09573 /* game_3x4x88.json */; };
-		B10CBC6C26176CCB00A09573 /* game_2x3x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B10CBC6926176CCB00A09573 /* game_2x3x88.json */; };
-		B10CBC6D26176CCB00A09573 /* game_5x6x88.json in Resources */ = {isa = PBXBuildFile; fileRef = B10CBC6A26176CCB00A09573 /* game_5x6x88.json */; };
 		B150E8AB25B4A4F200C215F3 /* word_maker WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B150E8AA25B4A4F200C215F3 /* word_maker WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B150E8B025B4A4F300C215F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B150E8AF25B4A4F300C215F3 /* Assets.xcassets */; };
 		B150E8B725B4A4F300C215F3 /* word_maker WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B150E8B625B4A4F300C215F3 /* word_maker WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -20,8 +17,15 @@
 		B150E8C525B4A4F400C215F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B150E8C425B4A4F400C215F3 /* Preview Assets.xcassets */; };
 		B150E93625B4AC5400C215F3 /* Aldrich-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B150E92B25B4AC5400C215F3 /* Aldrich-Regular.ttf */; };
 		B150E93725B4AC5400C215F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B150E92D25B4AC5400C215F3 /* Localizable.strings */; };
-		B150E93A25B4AC5400C215F3 /* game_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B150E93125B4AC5400C215F3 /* game_music.mp3 */; };
-		B150E93C25B4AC5400C215F3 /* game_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = B150E93325B4AC5400C215F3 /* game_sound.wav */; };
+		D097D46129325E1600D7F3E7 /* word_5.txt in Resources */ = {isa = PBXBuildFile; fileRef = D097D45A29325E1400D7F3E7 /* word_5.txt */; };
+		D097D46229325E1600D7F3E7 /* word_8.txt in Resources */ = {isa = PBXBuildFile; fileRef = D097D45B29325E1400D7F3E7 /* word_8.txt */; };
+		D097D46329325E1600D7F3E7 /* word_4.txt in Resources */ = {isa = PBXBuildFile; fileRef = D097D45C29325E1500D7F3E7 /* word_4.txt */; };
+		D097D46429325E1600D7F3E7 /* word_6.txt in Resources */ = {isa = PBXBuildFile; fileRef = D097D45D29325E1500D7F3E7 /* word_6.txt */; };
+		D097D46529325E1600D7F3E7 /* word_3.txt in Resources */ = {isa = PBXBuildFile; fileRef = D097D45E29325E1600D7F3E7 /* word_3.txt */; };
+		D097D46629325E1600D7F3E7 /* word_9.txt in Resources */ = {isa = PBXBuildFile; fileRef = D097D45F29325E1600D7F3E7 /* word_9.txt */; };
+		D097D46729325E1600D7F3E7 /* word_7.txt in Resources */ = {isa = PBXBuildFile; fileRef = D097D46029325E1600D7F3E7 /* word_7.txt */; };
+		D097D46929325EB000D7F3E7 /* WordHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D097D46829325EB000D7F3E7 /* WordHelper.swift */; };
+		D097D46B29326D1000D7F3E7 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D097D46A29326D1000D7F3E7 /* ResultView.swift */; };
 		D0AB76AD29319D6B0035C3C6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AB76AC29319D6B0035C3C6 /* MainView.swift */; };
 		D0AB76AF2931A2ED0035C3C6 /* LetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AB76AE2931A2ED0035C3C6 /* LetterView.swift */; };
 		D0AB76B12931A36D0035C3C6 /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AB76B02931A36D0035C3C6 /* WordView.swift */; };
@@ -71,9 +75,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B10CBC6826176CCB00A09573 /* game_3x4x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_3x4x88.json; sourceTree = "<group>"; };
-		B10CBC6926176CCB00A09573 /* game_2x3x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_2x3x88.json; sourceTree = "<group>"; };
-		B10CBC6A26176CCB00A09573 /* game_5x6x88.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game_5x6x88.json; sourceTree = "<group>"; };
 		B150E8A625B4A4F100C215F3 /* Boxman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boxman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B150E8AA25B4A4F200C215F3 /* word_maker WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "word_maker WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B150E8AF25B4A4F300C215F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,8 +88,15 @@
 		B150E8C625B4A4F400C215F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B150E92B25B4AC5400C215F3 /* Aldrich-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aldrich-Regular.ttf"; sourceTree = "<group>"; };
 		B150E92D25B4AC5400C215F3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		B150E93125B4AC5400C215F3 /* game_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_music.mp3; sourceTree = "<group>"; };
-		B150E93325B4AC5400C215F3 /* game_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = game_sound.wav; sourceTree = "<group>"; };
+		D097D45A29325E1400D7F3E7 /* word_5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = word_5.txt; sourceTree = "<group>"; };
+		D097D45B29325E1400D7F3E7 /* word_8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = word_8.txt; sourceTree = "<group>"; };
+		D097D45C29325E1500D7F3E7 /* word_4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = word_4.txt; sourceTree = "<group>"; };
+		D097D45D29325E1500D7F3E7 /* word_6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = word_6.txt; sourceTree = "<group>"; };
+		D097D45E29325E1600D7F3E7 /* word_3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = word_3.txt; sourceTree = "<group>"; };
+		D097D45F29325E1600D7F3E7 /* word_9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = word_9.txt; sourceTree = "<group>"; };
+		D097D46029325E1600D7F3E7 /* word_7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = word_7.txt; sourceTree = "<group>"; };
+		D097D46829325EB000D7F3E7 /* WordHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordHelper.swift; sourceTree = "<group>"; };
+		D097D46A29326D1000D7F3E7 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		D0AB76AC29319D6B0035C3C6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D0AB76AE2931A2ED0035C3C6 /* LetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterView.swift; sourceTree = "<group>"; };
 		D0AB76B02931A36D0035C3C6 /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
@@ -148,6 +156,8 @@
 				D0AB76AE2931A2ED0035C3C6 /* LetterView.swift */,
 				D0AB76B02931A36D0035C3C6 /* WordView.swift */,
 				D0AB76B22931DFEB0035C3C6 /* GameView.swift */,
+				D097D46829325EB000D7F3E7 /* WordHelper.swift */,
+				D097D46A29326D1000D7F3E7 /* ResultView.swift */,
 			);
 			path = "word_maker WatchKit Extension";
 			sourceTree = "<group>";
@@ -163,7 +173,7 @@
 		B150E92625B4AB0800C215F3 /* asset */ = {
 			isa = PBXGroup;
 			children = (
-				B150E92E25B4AC5400C215F3 /* media */,
+				B150E92E25B4AC5400C215F3 /* word */,
 				B150E92C25B4AC5400C215F3 /* locale */,
 				B150E92A25B4AC5400C215F3 /* font */,
 			);
@@ -186,16 +196,18 @@
 			path = locale;
 			sourceTree = "<group>";
 		};
-		B150E92E25B4AC5400C215F3 /* media */ = {
+		B150E92E25B4AC5400C215F3 /* word */ = {
 			isa = PBXGroup;
 			children = (
-				B10CBC6926176CCB00A09573 /* game_2x3x88.json */,
-				B10CBC6826176CCB00A09573 /* game_3x4x88.json */,
-				B10CBC6A26176CCB00A09573 /* game_5x6x88.json */,
-				B150E93125B4AC5400C215F3 /* game_music.mp3 */,
-				B150E93325B4AC5400C215F3 /* game_sound.wav */,
+				D097D45E29325E1600D7F3E7 /* word_3.txt */,
+				D097D45C29325E1500D7F3E7 /* word_4.txt */,
+				D097D45A29325E1400D7F3E7 /* word_5.txt */,
+				D097D45D29325E1500D7F3E7 /* word_6.txt */,
+				D097D46029325E1600D7F3E7 /* word_7.txt */,
+				D097D45B29325E1400D7F3E7 /* word_8.txt */,
+				D097D45F29325E1600D7F3E7 /* word_9.txt */,
 			);
-			path = media;
+			path = word;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,14 +324,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B10CBC6B26176CCB00A09573 /* game_3x4x88.json in Resources */,
 				B150E8C525B4A4F400C215F3 /* Preview Assets.xcassets in Resources */,
-				B150E93A25B4AC5400C215F3 /* game_music.mp3 in Resources */,
-				B150E93C25B4AC5400C215F3 /* game_sound.wav in Resources */,
+				D097D46329325E1600D7F3E7 /* word_4.txt in Resources */,
+				D097D46629325E1600D7F3E7 /* word_9.txt in Resources */,
+				D097D46129325E1600D7F3E7 /* word_5.txt in Resources */,
 				B150E93725B4AC5400C215F3 /* Localizable.strings in Resources */,
 				B150E93625B4AC5400C215F3 /* Aldrich-Regular.ttf in Resources */,
-				B10CBC6D26176CCB00A09573 /* game_5x6x88.json in Resources */,
-				B10CBC6C26176CCB00A09573 /* game_2x3x88.json in Resources */,
+				D097D46729325E1600D7F3E7 /* word_7.txt in Resources */,
+				D097D46229325E1600D7F3E7 /* word_8.txt in Resources */,
+				D097D46429325E1600D7F3E7 /* word_6.txt in Resources */,
+				D097D46529325E1600D7F3E7 /* word_3.txt in Resources */,
 				B150E8C225B4A4F400C215F3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,11 +347,13 @@
 			files = (
 				D0AB76AD29319D6B0035C3C6 /* MainView.swift in Sources */,
 				B150E8BC25B4A4F300C215F3 /* ContentView.swift in Sources */,
+				D097D46B29326D1000D7F3E7 /* ResultView.swift in Sources */,
 				D0AB76B12931A36D0035C3C6 /* WordView.swift in Sources */,
 				B150E8BE25B4A4F300C215F3 /* WordApp.swift in Sources */,
 				B150E8C025B4A4F300C215F3 /* ComplicationController.swift in Sources */,
 				D0AB76AF2931A2ED0035C3C6 /* LetterView.swift in Sources */,
 				D0AB76B32931DFEB0035C3C6 /* GameView.swift in Sources */,
+				D097D46929325EB000D7F3E7 /* WordHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
