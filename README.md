@@ -1,1 +1,0 @@
-# sokoban_watch_apple
