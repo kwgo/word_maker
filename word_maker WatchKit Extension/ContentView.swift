@@ -65,7 +65,7 @@ extension String {
         let toIndex = index(from: to)
         return String(self[fromIndex..<toIndex])
     }
-
+    
     func substring(with r: Range<Int>) -> String {
         let startIndex = index(from: r.lowerBound)
         let endIndex = index(from: r.upperBound)
@@ -81,29 +81,48 @@ extension Color {
         let blue = Double((hex & 0xff) >> 0) / 255.0
         self.init(.sRGB, red: red, green: green, blue: blue, opacity: opacity)
     }
+    
+//    public static var background: Color { return Color(red: 0.871, green: 0.918, blue: 0.965) }
+//    public static var lightShadow: Color { return Color(red: 0.953, green: 0.976, blue: 1.0) }
+//    public static var darkShadow: Color { return Color(red: 0.745, green: 0.796, blue: 0.847) }
+    public static var background: Color { return Color.clear }
+    public static var lightShadow: Color { return Color.clear }
+    public static var darkShadow: Color { return Color.clear }
 }
 
 struct ContentView: View {
-    
     @State var activity = "main"
     
-    
-    #if !os(watchOS)
-    static let edgeSet = Edge.Set()
-    #else
-    static let edgeSet = Edge.Set.bottom
-    #endif
-
-    
     var body: some View {
-            ZStack {
-                Image("game_background").resizable().edgesIgnoringSafeArea(.all)
+        ZStack {
+            Image("game_background")
+                .resizable()
+            //.edgesIgnoringSafeArea(.all)
+            VStack {
+                HStack {
+                Image("game_title")
+                    .renderingMode(.original)
+                           .resizable()
+                       .frame(width: 100, height: 50, alignment: .leading)
+                       .padding(0)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            //    Spacer()
+                
+                Group {
                 if "main" == self.activity {
                     MainView(content: self)//.edgesIgnoringSafeArea(ContentView.edgeSet)
                 } else if "game" == self.activity {
-          //          GameView(content: self)//.edgesIgnoringSafeArea(ContentView.edgeSet)
+                    //          GameView(content: self)//.edgesIgnoringSafeArea(ContentView.edgeSet)
                 }
-            }.edgesIgnoringSafeArea(ContentView.edgeSet)
+                }
+                .frame(alignment: .bottom)
+            }
+            
+        }
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarHidden(true)
     }
     
     func startActivity(activity:String) {
