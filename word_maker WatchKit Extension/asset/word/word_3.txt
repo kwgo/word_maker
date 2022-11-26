@@ -122,6 +122,7 @@ jew
 icy
 wow
 prc
+bin
 add
 par
 hay

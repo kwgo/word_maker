@@ -75,6 +75,10 @@ extension String {
     func trim() -> String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }
+    
+    func isNumber() -> Bool {
+        return CharacterSet(charactersIn: self).isSubset(of: CharacterSet.decimalDigits)
+    }
 }
 
 extension Color {
@@ -98,7 +102,7 @@ struct ContentView: View {
     @State var view = "main"
     @State var word = ""
     @State var resultWord = ""
-
+    
     var body: some View {
         ZStack {
             Image("game_background")

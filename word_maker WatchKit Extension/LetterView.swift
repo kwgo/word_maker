@@ -30,7 +30,7 @@ struct LetterView: View {
                     .font(Font.custom("Aldrich", size: 40))
                     //.offset(x: pressed ? -90 : 0, y: pressed ? -90 : 0)
                     .rotation3DEffect(Angle(degrees: pressed ? 20 : 0), axis: (x: 10, y: -10, z: 0))
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: -8, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: self.getBottomBounce(), trailing: 0))
             }
             .frame(width: self.size, height: self.size)
             .background(
@@ -44,5 +44,18 @@ struct LetterView: View {
             )
             .scaleEffect(self.tapped ? 1.2 : 1)
         }
+    }
+    
+    func getBottomBounce() -> CGFloat {
+        if(self.letter.isNumber()) {
+            return -8.0
+        } else if("gpqy".contains(self.letter)) {
+            return 2.0
+        } else if("bdfhilt".contains(self.letter)) {
+            return -6.0
+        } else if("j".contains(self.letter)) {
+            return -2.0
+        }
+        return 0.0
     }
 }
