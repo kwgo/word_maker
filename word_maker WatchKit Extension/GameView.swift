@@ -25,7 +25,7 @@ struct GameView: View {
         if("long press" == letter) {
             print("cc long pressyyyy")
 
-            self.content.startView(view: "result", word: self.word, resultWord: "[" + self.word + "]")
+            self.content.startView(view: "result", word: self.word, resultWord: "[HINT]")
         } else {
             self.resultWord.append(contentsOf: letter)            
             if(self.resultWord.count == self.word.count) {

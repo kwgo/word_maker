@@ -14,14 +14,15 @@ struct ResultView: View {
     var resultWord: String
     
     var body: some View {
-        let success = self.getSuccess()
+        let success = self.isSuccess()
+        let hint = self.isHint()
         VStack {
-            Text(self.resultWord)
+            Text(hint ? self.word : self.resultWord)
                 .frame(alignment: .center)
-                .font(Font.custom("Aldrich", size: self.resultWord.count < 9 ? 40 : self.resultWord.count == 9 ? 36 : 32))
+                .font(Font.custom("Aldrich", size: self.resultWord.count < 9 ? 40 : 36))
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: -8, trailing: 0))
             
-            Image(success ? "game_success" : "game_fail")
+            Image(success ? "game_success" : hint ? "game_hint" : "game_fail")
                 .renderingMode(.original)
                 .resizable()
                 .frame(width: 100, height: 100, alignment: .center)
@@ -32,7 +33,7 @@ struct ResultView: View {
         }
     }
     
-    func getSuccess() -> Bool {
+    func isSuccess() -> Bool {
         let success = self.resultWord == self.word
         if(!success) {
             let words = WordHelper.instance().getWords()
@@ -45,12 +46,15 @@ struct ResultView: View {
         return success
     }
     
+    func isHint() -> Bool {
+        return "[HINT]" == self.resultWord
+    }
+    
     func onContinue(success: Bool) {
         WordHelper.instance().setWordIndex(next: success)
         
         let word = WordHelper.instance().getWord()
         self.content.startView(view: "game", word: word)
     }
-    
 }
 

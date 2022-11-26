@@ -16,7 +16,6 @@
 		B150E8C225B4A4F400C215F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B150E8C125B4A4F400C215F3 /* Assets.xcassets */; };
 		B150E8C525B4A4F400C215F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B150E8C425B4A4F400C215F3 /* Preview Assets.xcassets */; };
 		B150E93625B4AC5400C215F3 /* Aldrich-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B150E92B25B4AC5400C215F3 /* Aldrich-Regular.ttf */; };
-		B150E93725B4AC5400C215F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B150E92D25B4AC5400C215F3 /* Localizable.strings */; };
 		D097D46129325E1600D7F3E7 /* word_5.txt in Resources */ = {isa = PBXBuildFile; fileRef = D097D45A29325E1400D7F3E7 /* word_5.txt */; };
 		D097D46229325E1600D7F3E7 /* word_8.txt in Resources */ = {isa = PBXBuildFile; fileRef = D097D45B29325E1400D7F3E7 /* word_8.txt */; };
 		D097D46329325E1600D7F3E7 /* word_4.txt in Resources */ = {isa = PBXBuildFile; fileRef = D097D45C29325E1500D7F3E7 /* word_4.txt */; };
@@ -88,7 +87,6 @@
 		B150E8C425B4A4F400C215F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B150E8C625B4A4F400C215F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B150E92B25B4AC5400C215F3 /* Aldrich-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aldrich-Regular.ttf"; sourceTree = "<group>"; };
-		B150E92D25B4AC5400C215F3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		D097D45A29325E1400D7F3E7 /* word_5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = word_5.txt; sourceTree = "<group>"; };
 		D097D45B29325E1400D7F3E7 /* word_8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = word_8.txt; sourceTree = "<group>"; };
 		D097D45C29325E1500D7F3E7 /* word_4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = word_4.txt; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				B150E92E25B4AC5400C215F3 /* word */,
-				B150E92C25B4AC5400C215F3 /* locale */,
 				B150E92A25B4AC5400C215F3 /* font */,
 			);
 			path = asset;
@@ -189,14 +186,6 @@
 				B150E92B25B4AC5400C215F3 /* Aldrich-Regular.ttf */,
 			);
 			path = font;
-			sourceTree = "<group>";
-		};
-		B150E92C25B4AC5400C215F3 /* locale */ = {
-			isa = PBXGroup;
-			children = (
-				B150E92D25B4AC5400C215F3 /* Localizable.strings */,
-			);
-			path = locale;
 			sourceTree = "<group>";
 		};
 		B150E92E25B4AC5400C215F3 /* word */ = {
@@ -331,7 +320,6 @@
 				D097D46329325E1600D7F3E7 /* word_4.txt in Resources */,
 				D097D46629325E1600D7F3E7 /* word_9.txt in Resources */,
 				D097D46129325E1600D7F3E7 /* word_5.txt in Resources */,
-				B150E93725B4AC5400C215F3 /* Localizable.strings in Resources */,
 				B150E93625B4AC5400C215F3 /* Aldrich-Regular.ttf in Resources */,
 				D097D46729325E1600D7F3E7 /* word_7.txt in Resources */,
 				D097D46229325E1600D7F3E7 /* word_8.txt in Resources */,

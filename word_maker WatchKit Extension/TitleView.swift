@@ -19,14 +19,14 @@ struct TitleView: View {
                     VStack {
                         Text("Make")
                             .font(Font.custom("Aldrich", size: 36))
+                            .foregroundColor(Color.gray)
                             .padding(.leading, 10)
-                            .padding(.top, 0)
+                            .padding(.top, 20)
                         Text("a Word")
                             .font(Font.custom("Aldrich", size: 30))
+                            .foregroundColor(Color.detailColor)
                             .padding(.leading, 60)
                             .padding(.top, -20)
-                            .foregroundColor(Color.detailColor)
-                        
                     }
                 } else if "game" == self.view {
                     HStack {
@@ -44,7 +44,7 @@ struct TitleView: View {
                             .padding(.leading, 2)
                             .padding(.top, -6)
                             .onTapGesture(count: 1) {
-                                self.content.startView(view: "result", word: self.word, resultWord: "[" + self.word + "]")
+                                self.content.startView(view: "result", word: self.word, resultWord: "[HINT]")
                             }
                     }
                 }
@@ -52,7 +52,7 @@ struct TitleView: View {
             Spacer()
         }
         .frame( height: 50, alignment: .leading)
-       
+        
     }
     
     func getTitle() -> String {
