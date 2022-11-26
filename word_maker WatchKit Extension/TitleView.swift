@@ -40,7 +40,7 @@ struct TitleView: View {
                         Text(self.getTitle())
                             .font(Font.custom("Aldrich", size: 18))
                             .foregroundColor(Color.detailColor)
-                            .padding(.leading, 2)
+                            .padding(.leading, 0)
                             .padding(.top, -6)
                             .onTapGesture(count: 1) {
                                 self.content.startView(view: "result", word: self.word, resultWord: "[HINT]")
