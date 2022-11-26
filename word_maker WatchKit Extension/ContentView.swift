@@ -82,9 +82,9 @@ extension Color {
         self.init(.sRGB, red: red, green: green, blue: blue, opacity: opacity)
     }
     
-//    public static var background: Color { return Color(red: 0.871, green: 0.918, blue: 0.965) }
-//    public static var lightShadow: Color { return Color(red: 0.953, green: 0.976, blue: 1.0) }
-//    public static var darkShadow: Color { return Color(red: 0.745, green: 0.796, blue: 0.847) }
+    //    public static var background: Color { return Color(red: 0.871, green: 0.918, blue: 0.965) }
+    //    public static var lightShadow: Color { return Color(red: 0.953, green: 0.976, blue: 1.0) }
+    //    public static var darkShadow: Color { return Color(red: 0.745, green: 0.796, blue: 0.847) }
     public static var background: Color { return Color.clear }
     public static var lightShadow: Color { return Color.clear }
     public static var darkShadow: Color { return Color.clear }
@@ -97,29 +97,28 @@ struct ContentView: View {
         ZStack {
             Image("game_background")
                 .resizable()
-            //.edgesIgnoringSafeArea(.all)
+            
             VStack {
                 HStack {
-                Image("game_title")
-                    .renderingMode(.original)
-                           .resizable()
-                       .frame(width: 100, height: 50, alignment: .leading)
-                       .padding(0)
+                    Image("game_title")
+                        .renderingMode(.original)
+                        .resizable()
+                        .frame(width: 100, height: 50, alignment: .leading)
+                        .padding(0)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-            
-            //    Spacer()
+                
+                //    Spacer()
                 
                 Group {
-                if "main" == self.activity {
-                    MainView(content: self)//.edgesIgnoringSafeArea(ContentView.edgeSet)
-                } else if "game" == self.activity {
-                    //          GameView(content: self)//.edgesIgnoringSafeArea(ContentView.edgeSet)
-                }
+                    if "main" == self.activity {
+                        MainView(content: self)
+                    } else if "game" == self.activity {
+                        //          GameView(content: self)
+                    }
                 }
                 .frame(alignment: .bottom)
             }
-            
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarHidden(true)

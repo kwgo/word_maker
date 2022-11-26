@@ -11,9 +11,10 @@ struct WordView: View {
     var word: String
     var action: (String) -> Void?
     
-    @State var letters: [String] = ["", "", "", "", "", "", "", "", ""]
-    
     let colors: [Color] = [Color.red, Color.orange, Color.yellow, Color.green, Color.blue, Color.purple, Color.pink, Color.black, Color.gray]
+    
+    @State var colorIndex = 0
+    
     
     let columns = [GridItem(), GridItem(), GridItem()]
     
@@ -25,9 +26,9 @@ struct WordView: View {
                     let letters = self.getLetters()
                     LazyVGrid (columns: columns, alignment: .center, spacing: 0) {
                         ForEach(0 ..< 9, id: \.self) { index in
-                            let text = letters[numbers[index]]
+                            let letter = letters[numbers[index]]
                             let color = colors[numbers[index]]
-                            LetterView(text: text, color: color, size: geometry.size.width / 3.5)
+                            LetterView(letter: letter, color: color, size: geometry.size.width / 3.5, action: self.doAction)
                                 .id(UUID())
                         }
                     }
@@ -37,6 +38,11 @@ struct WordView: View {
         }
     }
     
+    func doAction(letter: String) {
+        self.colorIndex = (self.colorIndex + 1) % 9
+    
+        self.action(letter)
+    }
     
     func getNumbers()  -> [Int]{
         var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8]

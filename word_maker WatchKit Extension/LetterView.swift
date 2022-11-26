@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct LetterView: View {
-    var text: String
+    var letter: String
     var color: Color
     var size: CGFloat
+    var action: (String) -> Void?
+    
+    @State var tappedColor = Color.clear
+
     
     @State var circleTapped = false
     @State var circlePressed = false
-    
+
     var body: some View {
+        let color = self.getColor()
         ZStack {
             Rectangle()
                 .foregroundColor(Color.clear)
@@ -23,10 +28,10 @@ struct LetterView: View {
                 .aspectRatio(1.0, contentMode: .fit)
             
             ZStack {
-                Text(self.text)
-                    //.foregroundColor(circlePressed ? Color.white : Color.detailColor)
+                Text(self.letter)
+                //.foregroundColor(circlePressed ? Color.white : Color.detailColor)
                     .frame(alignment: .center)
-                    //.font(.system(size: 38, weight: .regular))
+                //.font(.system(size: 38, weight: .regular))
                     .font(Font.custom("Aldrich", size: 40))
                     .offset(x: circlePressed ? -90 : 0, y: circlePressed ? -90 : 0)
                     .rotation3DEffect(Angle(degrees: circlePressed ? 20 : 0), axis: (x: 10, y: -10, z: 0))
@@ -36,24 +41,30 @@ struct LetterView: View {
             .background(
                 ZStack {
                     Circle()
-                        .fill(circleTapped ? self.color : Color.background)
+                        .fill(circleTapped ? color : Color.background)
                         .frame(width: self.size - 10, height: self.size - 10)
                         .shadow(color: Color.lightShadow, radius: 2, x: -2, y: -2)
                         .shadow(color: Color.darkShadow, radius: 2, x: 2, y: 2)
                 }
             )
             .scaleEffect(circleTapped ? 1.2 : 1)
-
-
+            
+            
             .onTapGesture(count: 1) {
-                self.circleTapped.toggle()
-                print("word=ffff")
-          
-                //DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                // self.circleTapped = false
-                //}
+                print("letter=", self.letter)
+                if(!self.circleTapped) {
+                    self.tappedColor = self.color
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        self.action(self.letter)
+                    }
+                }
+                self.circleTapped = true
             }
         }
     }
+
     
+    func getColor() -> Color {
+        return self.circleTapped ? self.tappedColor : self.color
+    }
 }

@@ -12,12 +12,12 @@ struct MainView: View {
         
     var body: some View {
         VStack() {
-            WordView(word: "3456789", action: self.onButton)
+            GameView(word: "3456789", action: self.doAction)
         }
     }
     
     
-    func onButton(word: String) {
+    func doAction(word: String) {
         print("word=", word)
   
     }
