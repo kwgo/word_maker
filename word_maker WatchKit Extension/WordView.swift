@@ -29,7 +29,7 @@ struct WordView: View {
                             LetterView(letter: letters[index], tapped: self.tappedStatus[index], color: self.tappedColors[index], size: geometry.size.width / 3.5)
                                 .id(UUID())
                                 .onTapGesture(count: 1) {
-                                    if(!self.tappedStatus[index] && !letters[index].isEmpty) {
+                                    if(!self.tappedStatus[index] && !letters[index].trim().isEmpty) {
                                         self.tappedStatus[index] = true
                                         self.tappedColors[index] = self.colors[self.colorIndex]
                                         self.colorIndex = (self.colorIndex + 1) % 9

@@ -29,7 +29,7 @@ struct GameView: View {
         }
     }
     func getShuffledWord() -> String {
-        var letters: [String] = ["", "", "", "", "", "", "", "", ""]
+        var letters: [String] = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
         var index = 0
         for char in word {
             letters[index] = String(char)
