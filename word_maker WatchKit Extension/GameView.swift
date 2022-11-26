@@ -30,6 +30,7 @@ struct GameView: View {
             }
         }
     }
+    
     func getShuffledWord() -> String {
         var letters: [String] = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
         var index = 0
@@ -38,9 +39,6 @@ struct GameView: View {
             index = index + 1
         }
         letters.shuffle()
-        
-        print ("word is ", self.word)
-        print ("shuffled is ", letters.joined(separator: ""))
         return letters.joined(separator: "")
     }
 }

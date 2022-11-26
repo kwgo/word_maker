@@ -13,7 +13,7 @@ struct WordView: View {
     
     let columns = [GridItem(), GridItem(), GridItem()]
     
-    let colors: [Color] = [Color.red, Color.orange, Color.yellow, Color.green, Color.blue, Color.purple, Color.pink, Color.black, Color.gray]
+    let colors: [Color] = [Color.red, Color.orangeColor, Color.yellow, Color.green, Color.cyanColor, Color.blue, Color.pinkColor, Color.brownColor, Color.purple]
     
     @State var tappedStatus: [Bool] = [false, false, false, false, false, false, false, false, false]
     @State var tappedColors: [Color] = [Color.clear, Color.clear, Color.clear, Color.clear, Color.clear, Color.clear, Color.clear, Color.clear, Color.clear]

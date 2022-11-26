@@ -12,7 +12,7 @@ struct MainView: View {
     
     var body: some View {
         VStack() {
-            WordView(word: "3456789", action: self.doAction)
+            WordView(word: self.getShuffledIndex(), action: self.doAction)
         }
     }
     
@@ -25,5 +25,16 @@ struct MainView: View {
         }
     }
     
+    func getShuffledIndex() -> String {
+        var letters: [String] = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+        var index = 0
+        for letter in "3456789" {
+            letters[index] = String(letter)
+            index = index + 1
+        }
+        letters.shuffle()
+        return letters.joined(separator: "")
+    }
+
 }
 

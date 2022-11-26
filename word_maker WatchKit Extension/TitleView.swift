@@ -20,7 +20,7 @@ struct TitleView: View {
                         Text("Make")
                             .font(Font.custom("Aldrich", size: 36))
                             .foregroundColor(Color.titleColor)
-                            .padding(.leading, 10)
+                            .padding(.leading, -10)
                             .padding(.top, 16)
                         Text("a Word")
                             .font(Font.custom("Aldrich", size: 30))
@@ -50,7 +50,7 @@ struct TitleView: View {
             }
             Spacer()
         }
-        .frame( height: 50, alignment: .leading)
+        .frame(height: 50, alignment: .leading)
     }
     
     func getTitle() -> String {

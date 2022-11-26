@@ -6,7 +6,6 @@ fig
 nib
 tug
 bag
-hmm
 ion
 fin
 den
@@ -143,7 +142,6 @@ fop
 kid
 for
 gad
-mmm
 fox
 nor
 not

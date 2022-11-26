@@ -95,7 +95,14 @@ extension Color {
 
     public static var detailColor: Color { return Color(0xd5883c) }
 
-    public static var titleColor: Color { return Color(red: 0.745, green: 0.796, blue: 0.847) }
+    //public static var titleColor: Color { return Color(red: 0.745, green: 0.796, blue: 0.847) }
+    public static var titleColor: Color { return Color(red: 0.871, green: 0.918, blue: 0.965) }
+
+    public static var orangeColor: Color { return Color(0xfc6600) }
+    public static var pinkColor: Color { return Color(0xe11584) }
+    public static var cyanColor: Color { return Color(0x00ffff) }
+    public static var brownColor: Color { return Color(0x964b00) }
+
     //    public static var background: Color { return Color(red: 0.871, green: 0.918, blue: 0.965) }
     //    public static var lightShadow: Color { return Color(red: 0.953, green: 0.976, blue: 1.0) }
     //    public static var darkShadow: Color { return Color(red: 0.745, green: 0.796, blue: 0.847) }
