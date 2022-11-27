@@ -31,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D08819012933FB9C000C9E35 /* word-maker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "word-maker-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D0AD5C242933D65A00AAA0E3 /* word_maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = word_maker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AD5C272933D65A00AAA0E3 /* WordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordApp.swift; sourceTree = "<group>"; };
 		D0AD5C292933D65A00AAA0E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 		D0AD5C262933D65A00AAA0E3 /* word_maker */ = {
 			isa = PBXGroup;
 			children = (
+				D08819012933FB9C000C9E35 /* word-maker-Info.plist */,
 				D0AD5C2B2933D65E00AAA0E3 /* Assets.xcassets */,
 				D0AD5C452933D72E00AAA0E3 /* asset */,
 				D0AD5C272933D65A00AAA0E3 /* WordApp.swift */,
@@ -370,6 +372,7 @@
 				DEVELOPMENT_TEAM = 54NHYSS93S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "word-maker-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -399,6 +402,7 @@
 				DEVELOPMENT_TEAM = 54NHYSS93S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "word-maker-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -27,7 +27,7 @@ struct WordView: View {
                 VStack() {
                     LazyVGrid (columns: columns, alignment: .center, spacing: 0) {
                         ForEach(0 ..< 9, id: \.self) { index in
-                            LetterView(letter: letters[index], tapped: self.tappedStatus[index], color: self.tappedColors[index], size: geometry.size.width / 3.5)
+                            LetterView(letter: letters[index], tapped: self.tappedStatus[index], color: self.tappedColors[index], size: geometry.size.width / 3.8)
                                 .id(UUID())
                                 .onTapGesture(count: 1) {
                                     if(!self.tappedStatus[index] && !letters[index].trim().isEmpty) {

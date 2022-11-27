@@ -14,27 +14,27 @@ struct TitleView: View {
     var word: String
     
     var body: some View {
-        HStack {
+        VStack {
             Group {
-                if "main" == self.view {
+                if "main" == self.view || "title" == self.view {
                     VStack {
                         HStack {
                             Text("Make")
-                                .font(Font.custom("Aldrich", size: 32))
+                                .font(Font.custom("Aldrich", size: 80))
                                 .foregroundColor(Color.titleColor)
-                                .padding(.leading, 10)
-                                .padding(.top, 6)
+                                .padding(.leading, 20)
+                                .padding(.top, 16)
                             Spacer()
                         }
                         HStack {
                             Spacer()
                             Text("a Word")
-                                .font(Font.custom("Aldrich", size: 32))
+                                .font(Font.custom("Aldrich", size: 80))
                                 .foregroundColor(Color.detailColor)
                                 .lineLimit(1)
-                                .padding(.trailing, 10)
-                                .padding(.top, -16)
-                                .padding(.bottom, -12)
+                                .padding(.trailing, 20)
+                                .padding(.top, -52)
+                                .padding(.bottom, 40)
                         }
                     }
                 } else if "game" == self.view {
@@ -57,12 +57,9 @@ struct TitleView: View {
                             }
                     }
                     .padding(10)
-                } else if "result" == self.view {
-                    Spacer()
                 }
             }
-            Spacer()
-        }
+         }
     }
     
     func getTitle() -> String {

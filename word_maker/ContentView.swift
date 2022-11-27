@@ -91,17 +91,18 @@ extension Color {
         let blue = Double((hex & 0xff) >> 0) / 255.0
         self.init(.sRGB, red: red, green: green, blue: blue, opacity: opacity)
     }
-
+    
     public static var detailColor: Color { return Color(0xd5883c) }
-
+    
     //public static var titleColor: Color { return Color(red: 0.745, green: 0.796, blue: 0.847) }
+    public static var letterColor: Color { return Color(red: 0.871, green: 0.918, blue: 0.965) }
     public static var titleColor: Color { return Color(red: 0.871, green: 0.918, blue: 0.965) }
 
     public static var orangeColor: Color { return Color(0xfc6600) }
     public static var pinkColor: Color { return Color(0xe11584) }
     public static var cyanColor: Color { return Color(0x00ffff) }
     public static var brownColor: Color { return Color(0x964b00) }
-
+    
     //    public static var background: Color { return Color(red: 0.871, green: 0.918, blue: 0.965) }
     //    public static var lightShadow: Color { return Color(red: 0.953, green: 0.976, blue: 1.0) }
     //    public static var darkShadow: Color { return Color(red: 0.745, green: 0.796, blue: 0.847) }
@@ -114,30 +115,58 @@ struct ContentView: View {
     @State var view = "main"
     @State var word = ""
     @State var resultWord = ""
+   @State var isVisible = false
     
     var body: some View {
+        
+        
+        
         ZStack {
-            Image("game_background")
-                .resizable()
+            VStack {
+                Spacer()
+            }
             
             VStack {
                 TitleView(content: self, view: self.view, word: self.word)
                 
                 Spacer()
-                
+            
+ 
                 Group {
                     if "main" == self.view {
                         MainView(content: self)
+                            .opacity(isVisible ? 1 : 0)
+                            .onAppear() {
+                         //       DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                   //self.view = "main"
+                                    
+                                    
+                                withAnimation(.easeIn(duration: 10.0)) {
+                 isVisible = true
+                                                      }
+                          //      }
+                            }
+
+                        
+                       
                     } else if "game" == self.view {
                         GameView(content: self, word: self.word)
                     } else if "result" == self.view {
                         ResultView(content: self, word: self.word, resultWord: self.resultWord)
                     }
                 }
+                .frame(alignment: .bottom)
             }
+ 
+      //      Spacer()
         }
-        .edgesIgnoringSafeArea(.all)
-        .navigationBarHidden(true)
+        .background(
+            Image("game_background")
+                .resizable()
+        )
+        
+        //.edgesIgnoringSafeArea(.all)
+        //.navigationBarHidden(true)
     }
     
     func startView(view: String, word: String, resultWord: String = "") {
