@@ -20,10 +20,11 @@ struct ResultView: View {
         VStack {
             Text(hint ? self.word : self.resultWord)
                 .frame(alignment: .center)
-                .font(Font.custom("Aldrich", size: count < 8 ? 40 : 36))
+                .font(Font.custom("Aldrich", size: count < 8 ? 36 : 32))
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: -10, trailing: 0))
                 .fixedSize(horizontal: false, vertical: true)
                 .lineLimit(2)
+                .padding(.top, 20)
             
             Image(success ? "game_success" : hint ? "game_hint" : "game_fail")
                 .renderingMode(.original)

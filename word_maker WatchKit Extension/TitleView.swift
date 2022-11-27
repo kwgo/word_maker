@@ -17,40 +17,51 @@ struct TitleView: View {
             Group {
                 if "main" == self.view {
                     VStack {
-                        Text("Make")
-                            .font(Font.custom("Aldrich", size: 36))
-                            .foregroundColor(Color.titleColor)
-                            .padding(.leading, -50)
-                            .padding(.top, 16)
-                        Text("a Word")
-                            .font(Font.custom("Aldrich", size: 36))
-                            .foregroundColor(Color.detailColor)
-                            .padding(.leading, 50)
-                            .padding(.top, -20)
+                        HStack {
+                            Text("Make")
+                                .font(Font.custom("Aldrich", size: 32))
+                                .foregroundColor(Color.titleColor)
+                                .padding(.leading, 10)
+                                .padding(.top, 6)
+                            Spacer()
+                        }
+                        HStack {
+                            Spacer()
+                            Text("a Word")
+                                .font(Font.custom("Aldrich", size: 32))
+                                .foregroundColor(Color.detailColor)
+                                .lineLimit(1)
+                                .padding(.trailing, 10)
+                                .padding(.top, -16)
+                                .padding(.bottom, -16)
+                        }
                     }
                 } else if "game" == self.view {
                     HStack {
                         Image(systemName: "arrow.left")
                             .font(.system(size: 20))
-                            .padding(.leading, 10)
-                            .padding(.top, -10)
+                            .padding(.leading, 2)
+                            .padding(.top, 4)
                             .onTapGesture(count: 1) {
                                 self.content.startView(view: "main", word: "")
                             }
                         Text(self.getTitle())
-                            .font(Font.custom("Aldrich", size: 18))
+                            .font(Font.custom("Aldrich", size: 16))
                             .foregroundColor(Color.detailColor)
                             .padding(.leading, 0)
-                            .padding(.top, -6)
+                            .padding(.top, 2)
+                            .padding(.bottom, -4)
                             .onTapGesture(count: 1) {
                                 self.content.startView(view: "result", word: self.word, resultWord: "[HINT]")
                             }
                     }
+                    .padding(10)
+                } else if "result" == self.view {
+                    Spacer()
                 }
             }
             Spacer()
         }
-        .frame(height: 50, alignment: .leading)
     }
     
     func getTitle() -> String {
