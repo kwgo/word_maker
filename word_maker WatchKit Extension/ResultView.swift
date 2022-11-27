@@ -16,11 +16,14 @@ struct ResultView: View {
     var body: some View {
         let success = self.isSuccess()
         let hint = self.isHint()
+        let count = hint ? self.word.count : self.resultWord.count
         VStack {
             Text(hint ? self.word : self.resultWord)
                 .frame(alignment: .center)
-                .font(Font.custom("Aldrich", size: self.resultWord.count < 9 ? 40 : 36))
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: -8, trailing: 0))
+                .font(Font.custom("Aldrich", size: count < 8 ? 40 : 36))
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: -10, trailing: 0))
+                .fixedSize(horizontal: false, vertical: true)
+                .lineLimit(2)
             
             Image(success ? "game_success" : hint ? "game_hint" : "game_fail")
                 .renderingMode(.original)
