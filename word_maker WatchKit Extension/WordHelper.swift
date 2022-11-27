@@ -25,6 +25,7 @@ public class WordHelper {
             let lines = self.loadWords(index: index)
             self.words[index] = lines
         }
+        self.numbers = self.loadNumbers()
     }
     
     private var bookIndex = -1
@@ -35,6 +36,7 @@ public class WordHelper {
     
     public func setBookIndex(_ bookIndex: Int) {
         self.bookIndex = bookIndex
+        self.wordIndex = self.numbers[bookIndex]
     }
     
     private var wordIndex = 0
@@ -47,13 +49,15 @@ public class WordHelper {
         return self.words[self.bookIndex].count
     }
     
-    public func setWordIndex(_ wordIndex: Int) {
-        self.wordIndex = wordIndex
-    }
-    
     public func setWordIndex(next: Bool) {
-        self.wordIndex = self.wordIndex + (next ? 1 : 0)
-        self.wordIndex = self.wordIndex % self.words[self.bookIndex].count
+        if(next) {
+            self.wordIndex = self.wordIndex + 1
+            if(self.wordIndex >= self.words[self.bookIndex].count) {
+                self.wordIndex = self.words[self.bookIndex].count - 1
+            }
+            self.numbers[self.bookIndex] = self.wordIndex
+            self.saveNumbers(numbers: self.numbers)
+        }
     }
     
     public func getWord() -> String {
@@ -71,5 +75,42 @@ public class WordHelper {
             Swift.print("Fatal Error: \(error.localizedDescription)")
         }
         return lines
+    }
+    
+    var numbers: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    
+    public func loadNumbers() -> [Int] {
+        var numbers: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        do {
+            let name: String = "word_number.txt"
+            let paths = FileManager.default.urls (for: .documentDirectory, in: .userDomainMask)
+            let path = paths[0].appendingPathComponent(name)
+            let file = try String(contentsOf: path)
+            let lines = file.components(separatedBy: "\n")
+            var index = 0
+            for line in lines {
+                numbers[index] = Int(line) ?? 0
+                index = index + 1
+            }
+        } catch let error {
+            Swift.print("Fatal Error: \(error.localizedDescription)")
+        }
+        return numbers
+    }
+    
+    public func saveNumbers(numbers: [Int]) {
+        do {
+            let name: String = "word_number.txt"
+            let paths = FileManager.default.urls (for: .documentDirectory, in: .userDomainMask)
+            let path = paths[0].appendingPathComponent(name)
+            var strings = [String]()
+            for number in numbers {
+                strings.append(String(number))
+            }
+            let text = strings.joined(separator: "\n")
+            try text.write(to: path, atomically: false, encoding: .utf8)
+        } catch let error {
+            Swift.print("Fatal Error: \(error.localizedDescription)")
+        }
     }
 }
