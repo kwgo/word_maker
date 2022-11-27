@@ -33,7 +33,7 @@ struct TitleView: View {
                                 .lineLimit(1)
                                 .padding(.trailing, 10)
                                 .padding(.top, -16)
-                                .padding(.bottom, -16)
+                                .padding(.bottom, -12)
                         }
                     }
                 } else if "game" == self.view {
