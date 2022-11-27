@@ -496,7 +496,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jchip.word.maker.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE_SPECIFIER = "Word Maker Watch KitExtension Provision";
+				PROVISIONING_PROFILE_SPECIFIER = "Word Maker KitExtension Provision";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -520,9 +520,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jchip.word_maker.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jchip.word.maker.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE_SPECIFIER = "Word Maker Watch KitExtension Provision";
+				PROVISIONING_PROFILE_SPECIFIER = "Word Maker KitExtension Provision";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -544,7 +544,7 @@
 				INFOPLIST_FILE = "word_maker WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jchip.word.maker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Word Maker Watch KitApp Provision";
+				PROVISIONING_PROFILE_SPECIFIER = "Word Maker KitApp Provision";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -566,7 +566,7 @@
 				INFOPLIST_FILE = "word_maker WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jchip.word.maker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Word Maker Watch KitApp Provision";
+				PROVISIONING_PROFILE_SPECIFIER = "Word Maker KitApp Provision";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -585,7 +585,7 @@
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jchip.word.maker;
 				PRODUCT_NAME = "Make a Word";
-				PROVISIONING_PROFILE_SPECIFIER = "Word Maker Watch Provision";
+				PROVISIONING_PROFILE_SPECIFIER = "Word Maker Provision";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -600,7 +600,7 @@
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jchip.word.maker;
 				PRODUCT_NAME = "Make a Word";
-				PROVISIONING_PROFILE_SPECIFIER = "Word Maker Watch Provision";
+				PROVISIONING_PROFILE_SPECIFIER = "Word Maker Provision";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
