@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B150E8A525B4A4F100C215F3"
-               BuildableName = "Boxman.app"
+               BuildableName = "Make a Word.app"
                BlueprintName = "word_maker"
                ReferencedContainer = "container:word_maker.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
       <RemoteRunnable
          runnableDebuggingMode = "2"
          BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/Boxman">
+         RemotePath = "/Make a Word">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B150E8A925B4A4F200C215F3"
@@ -76,7 +76,7 @@
       <RemoteRunnable
          runnableDebuggingMode = "2"
          BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/Boxman">
+         RemotePath = "/Make a Word">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B150E8A925B4A4F200C215F3"
