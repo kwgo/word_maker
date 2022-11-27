@@ -20,13 +20,13 @@ struct TitleView: View {
                         Text("Make")
                             .font(Font.custom("Aldrich", size: 36))
                             .foregroundColor(Color.titleColor)
-                            .padding(.leading, -10)
+                            .padding(.leading, -50)
                             .padding(.top, 16)
                         Text("a Word")
-                            .font(Font.custom("Aldrich", size: 30))
+                            .font(Font.custom("Aldrich", size: 36))
                             .foregroundColor(Color.detailColor)
-                            .padding(.leading, 60)
-                            .padding(.top, -16)
+                            .padding(.leading, 50)
+                            .padding(.top, -20)
                     }
                 } else if "game" == self.view {
                     HStack {
