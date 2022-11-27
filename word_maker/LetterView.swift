@@ -28,7 +28,7 @@ struct LetterView: View {
                     .foregroundColor(Color.letterColor)
                 //.font(.system(size: 38, weight: .regular))
                     .frame(alignment: .center)
-                    .font(Font.custom("Aldrich", size: 80))
+                    .font(Font.custom("Aldrich", size: 70))
                     //.offset(x: pressed ? -90 : 0, y: pressed ? -90 : 0)
                     .rotation3DEffect(Angle(degrees: pressed ? 20 : 0), axis: (x: 10, y: -10, z: 0))
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: self.getBottomBounce(), trailing: 0))

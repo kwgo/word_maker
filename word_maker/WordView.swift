@@ -10,6 +10,7 @@ import SwiftUI
 
 struct WordView: View {
     var word: String
+    var size: CGFloat
     var action: (String) -> Void?
     
     let columns = [GridItem(), GridItem(), GridItem()]
@@ -22,32 +23,30 @@ struct WordView: View {
     
     var body: some View {
         let letters = self.getLetters()
-        GeometryReader { geometry in
+        VStack() {
             VStack() {
-                VStack() {
-                    LazyVGrid (columns: columns, alignment: .center, spacing: 0) {
-                        ForEach(0 ..< 9, id: \.self) { index in
-                            LetterView(letter: letters[index], tapped: self.tappedStatus[index], color: self.tappedColors[index], size: geometry.size.width / 3.8)
-                                .id(UUID())
-                                .onTapGesture(count: 1) {
-                                    if(!self.tappedStatus[index] && !letters[index].trim().isEmpty) {
-                                        self.tappedStatus[index] = true
-                                        self.tappedColors[index] = self.colors[self.colorIndex]
-                                        self.colorIndex = (self.colorIndex + 1) % 9
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                            self.action(letters[index])
-                                        }
+                LazyVGrid (columns: columns, alignment: .center, spacing: 0) {
+                    ForEach(0 ..< 9, id: \.self) { index in
+                        LetterView(letter: letters[index], tapped: self.tappedStatus[index], color: self.tappedColors[index], size: self.size)
+                            .id(UUID())
+                            .onTapGesture(count: 1) {
+                                if(!self.tappedStatus[index] && !letters[index].trim().isEmpty) {
+                                    self.tappedStatus[index] = true
+                                    self.tappedColors[index] = self.colors[self.colorIndex]
+                                    self.colorIndex = (self.colorIndex + 1) % 9
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                        self.action(letters[index])
                                     }
                                 }
-                                .onLongPressGesture(minimumDuration: 0.1) {
-                                    if(letters[index].isLetter()) {
-                                        self.action("[HINT]")
-                                    }
+                            }
+                            .onLongPressGesture(minimumDuration: 0.1) {
+                                if(letters[index].isLetter()) {
+                                    self.action("[HINT]")
                                 }
-                        }
+                            }
                     }
-                    .padding(0)
                 }
+                .padding(0)
             }
         }
     }

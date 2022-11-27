@@ -12,9 +12,11 @@ import SwiftUI
 struct MainView: View {
     var content: ContentView
     
+    var size: CGFloat
+    
     var body: some View {
         VStack() {
-            WordView(word: self.getShuffledIndex(), action: self.doAction)
+            WordView(word: self.getShuffledIndex(), size: self.size, action: self.doAction)
         }
     }
     

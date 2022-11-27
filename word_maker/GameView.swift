@@ -12,12 +12,13 @@ struct GameView: View {
     var content: ContentView
     
     var word: String
-    
+    var size: CGFloat
+
     @State var resultWord = ""
     
     var body: some View {
         VStack() {
-            WordView(word: self.getShuffledWord(), action: self.doAction)
+            WordView(word: self.getShuffledWord(), size: self.size, action: self.doAction)
         }
     }
     
