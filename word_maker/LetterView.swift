@@ -49,10 +49,10 @@ struct LetterView: View {
     
     func getBottomBounce() -> CGFloat {
         if(self.letter.isNumber()) {
-            return -8.0
+            return -12.0
         } else if("gpqy".contains(self.letter)) {
-            return 2.0
-        } else if("bdfhilt".contains(self.letter)) {
+            return 6.0
+        } else if("bdfhiklt".contains(self.letter)) {
             return -6.0
         } else if("j".contains(self.letter)) {
             return -2.0

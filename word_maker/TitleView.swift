@@ -38,34 +38,53 @@ struct TitleView: View {
                         }
                     }
                 } else if "game" == self.view {
-                    HStack {
-                        Image(systemName: "arrow.left")
-                            .font(.system(size: 20))
-                            .padding(.leading, 2)
-                            .padding(.top, 4)
-                            .onTapGesture(count: 1) {
-                                self.content.startView(view: "main", word: "")
-                            }
-                        Text(self.getTitle())
-                            .font(Font.custom("Aldrich", size: 16))
-                            .foregroundColor(Color.detailColor)
-                            .padding(.leading, 0)
-                            .padding(.top, 2)
-                            .padding(.bottom, -4)
-                            .onTapGesture(count: 1) {
-                                self.content.startView(view: "result", word: self.word, resultWord: "[HINT]")
-                            }
+                    VStack {
+                        HStack {
+                            Image(systemName: "arrow.left")
+                                .font(.system(size: 30, weight: .semibold))
+                                .foregroundColor(Color.titleColor)
+                                .padding(.leading, 12)
+                                .onTapGesture(count: 1) {
+                                    self.content.startView(view: "main", word: "")
+                                }
+                            Spacer()
+                        }
+                        
+                        Text("Make a Word")
+                            .font(Font.custom("Aldrich", size: 50))
+                            .foregroundColor(Color.titleColor)
+                            .lineLimit(1)
+                            .padding(.top, 30)
+                            .padding(.bottom, 16)
+                        
+                        HStack {
+                            Text(self.getTitle())
+                                .font(Font.custom("Aldrich", size: 26))
+                                .foregroundColor(Color.detailColor)
+                                .lineLimit(1)
+                                .padding(.leading, 0)
+                                .padding(.top, 0)
+                                .padding(.bottom, 0)
+                            
+                            Image(systemName: "lightbulb.circle")
+                                .font(.system(size: 24, weight: .regular))
+                                .foregroundColor(Color.titleColor)
+                                .padding(.leading, 2)
+                                .padding(.top, -6)
+                                .onTapGesture(count: 1) {
+                                    self.content.startView(view: "result", word: self.word, resultWord: "[HINT]")
+                                }
+                        }
                     }
-                    .padding(10)
                 }
             }
-         }
+        }
     }
     
     func getTitle() -> String {
-        var title = "L"
+        var title = ""
         title.append(String(WordHelper.instance().getBookIndex() + 3))
-        title.append("-")
+        title.append(" Letters   ")
         title.append(String(WordHelper.instance().getWordIndex() + 1))
         title.append("/")
         title.append(String(WordHelper.instance().getWordCount() + 0))

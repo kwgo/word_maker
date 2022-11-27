@@ -17,24 +17,31 @@ struct ResultView: View {
     var body: some View {
         let success = self.isSuccess()
         let hint = self.isHint()
-        let count = hint ? self.word.count : self.resultWord.count
+        HStack {
         VStack {
+            Spacer()
             Text(hint ? self.word : self.resultWord)
+                .font(Font.custom("Aldrich", size: 40))
+                .foregroundColor(Color.titleColor)
+         
                 .frame(alignment: .center)
-                .font(Font.custom("Aldrich", size: count < 8 ? 36 : 32))
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: -10, trailing: 0))
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 .fixedSize(horizontal: false, vertical: true)
                 .lineLimit(2)
-                .padding(.top, 20)
+                .padding(.top, 0)
             
-            Image(success ? "game_success" : hint ? "game_hint" : "game_fail")
+            Spacer()
+          Image(success ? "game_success" : hint ? "game_hint" : "game_fail")
                 .renderingMode(.original)
                 .resizable()
                 .frame(width: 100, height: 100, alignment: .center)
-                .padding(20)
+                //.padding(20)
                 .onTapGesture(count: 1) {
                     self.onContinue(success: success)
                 }
+            
+            Spacer()
+        }
         }
     }
     

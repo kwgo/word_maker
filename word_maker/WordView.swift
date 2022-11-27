@@ -34,7 +34,7 @@ struct WordView: View {
                                     self.tappedStatus[index] = true
                                     self.tappedColors[index] = self.colors[self.colorIndex]
                                     self.colorIndex = (self.colorIndex + 1) % 9
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                                         self.action(letters[index])
                                     }
                                 }
