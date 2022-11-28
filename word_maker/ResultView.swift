@@ -17,34 +17,29 @@ struct ResultView: View {
     var body: some View {
         let success = self.isSuccess()
         let hint = self.isHint()
-        HStack {
         VStack {
             Spacer()
             Text(hint ? self.word : self.resultWord)
-                .font(Font.custom("Aldrich", size: 40))
+                .font(Font.custom("Aldrich", size: 70))
                 .foregroundColor(Color.titleColor)
-         
-                .frame(alignment: .center)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 .fixedSize(horizontal: false, vertical: true)
                 .lineLimit(2)
-                .padding(.top, 0)
-            
+                .multilineTextAlignment(.center)
+            HStack {
+                Spacer()
+            }
             Spacer()
-          Image(success ? "game_success" : hint ? "game_hint" : "game_fail")
+            Image(success ? "game_success" : hint ? "game_hint" : "game_fail")
                 .renderingMode(.original)
                 .resizable()
                 .frame(width: 100, height: 100, alignment: .center)
-                //.padding(20)
                 .onTapGesture(count: 1) {
                     self.onContinue(success: success)
                 }
-            
             Spacer()
         }
-        }
     }
-    
     func isSuccess() -> Bool {
         let success = self.resultWord == self.word
         if(!success) {

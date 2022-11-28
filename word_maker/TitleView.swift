@@ -12,7 +12,7 @@ struct TitleView: View {
     var content: ContentView
     var view: String
     var word: String
-    
+    //UIInterfaceOrientationLandscapeLeft
     var body: some View {
         VStack {
             Group {
@@ -51,7 +51,7 @@ struct TitleView: View {
                         }
                         
                         Text("Make a Word")
-                            .font(Font.custom("Aldrich", size: 50))
+                            .font(Font.custom("Aldrich", size: 48))
                             .foregroundColor(Color.titleColor)
                             .lineLimit(1)
                             .padding(.top, 30)
