@@ -147,6 +147,7 @@ struct ContentView: View {
                 Spacer()
             }
         }
+        //.preferredColorScheme(.dark)
         .background(
             Image("game_background")
                 .resizable()

@@ -20,7 +20,7 @@ struct ResultView: View {
         VStack {
             Spacer()
             Text(hint ? self.word : self.resultWord)
-                .font(Font.custom("Aldrich", size: 70))
+                .font(Font.custom("Aldrich", size: 66))
                 .foregroundColor(Color.titleColor)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 .fixedSize(horizontal: false, vertical: true)
