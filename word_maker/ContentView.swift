@@ -161,6 +161,7 @@ struct ContentView: View {
     }
     
     func getUnitSize(_ geometry : GeometryProxy) -> CGFloat {
-        return min(geometry.size.width, geometry.size.height) / 4.5
+        let size = min(geometry.size.width, geometry.size.height) / 4.5
+        return min(size, 120.0)
     }
 }

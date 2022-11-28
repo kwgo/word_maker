@@ -46,7 +46,6 @@ struct WordView: View {
                             }
                     }
                 }
-                .padding(0)
             }
         }
     }

@@ -17,18 +17,18 @@ struct LetterView: View {
     @State var pressed = false
     
     var body: some View {
+        let aspectRatio = self.getAspectRatio()
         ZStack {
             Rectangle()
                 .foregroundColor(Color.clear)
                 .frame(width: self.size, alignment: .center)
-                .aspectRatio(1.0, contentMode: .fit)
+                .aspectRatio(aspectRatio, contentMode: .fit)
             
             ZStack {
                 Text(self.letter)
                     .foregroundColor(Color.letterColor)
-                //.font(.system(size: 38, weight: .regular))
-                    .frame(alignment: .center)
                     .font(Font.custom("Aldrich", size: 70))
+                    .frame(alignment: .center)
                     //.offset(x: pressed ? -90 : 0, y: pressed ? -90 : 0)
                     .rotation3DEffect(Angle(degrees: pressed ? 20 : 0), axis: (x: 10, y: -10, z: 0))
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: self.getBottomBounce(), trailing: 0))
@@ -58,5 +58,11 @@ struct LetterView: View {
             return -2.0
         }
         return 0.0
+    }
+    
+    func getAspectRatio() -> CGFloat {
+        let isPad = UIDevice.current.userInterfaceIdiom == .pad
+        let isLandscape = UIScreen.main.bounds.size.width > UIScreen.main.bounds.size.height
+        return isPad && isLandscape ? 2.0 : 1.0
     }
 }
