@@ -23,7 +23,6 @@ public class WordView {
 
     private int colorIndex = 0;
 
-
     public WordView(Activity activity, String word, ActionListener action) {
         this.activity = activity;
         this.word = word;
@@ -39,7 +38,7 @@ public class WordView {
     private List<String> getLetters() {
         List<String> letters = Arrays.asList(new String[]{"", "", "", "", "", "", "", "", ""});
         for (int index = 0; index < this.word.length(); index++) {
-            letters.set(index, String.valueOf(this.word.charAt(0)));
+            letters.set(index, String.valueOf(this.word.charAt(index)));
         }
         Collections.shuffle(letters);
         return letters;

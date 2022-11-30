@@ -36,43 +36,25 @@ public class LetterView {
         this.sparkButton = activity.findViewById(id);
 
         Drawable inactiveDrawable = TextDrawable.builder().buildRound(letter, Color.LTGRAY);
-        Drawable activeDrawable = TextDrawable.builder().buildRound(letter, Color.RED);
-
-        this.sparkButton.setActiveImage(activeDrawable);
         this.sparkButton.setInactiveImage(inactiveDrawable);
 
-        this.sparkButton.setColors(Color.RED, Color.CYAN);
+        //this.sparkButton.setColors(Color.GREEN, Color.CYAN);
 
         this.sparkButton.setEventListener(new SparkEventListener(){
-//            @Override
-//            void onEvent(ImageView button, boolean buttonState) {
-//                if (buttonState) {
-//                    // Button is active
-//                } else {
-//                    // Button is inactive
-//                }
-//            }
-
             @Override
             public void onEvent(ImageView button, boolean buttonState) {
                 if (buttonState) {
-                    Log.d("x", "Button is active");
-                    sparkButton.setEnabled(false);
-                } else {
-                    Log.d("x", "Button is inactive");
+                    sparkButton.setScaleX(2);
+                    sparkButton.setScaleY(2);
                 }
             }
-
-            @Override
-            public void onEventAnimationEnd(ImageView button, boolean buttonState) {
-                Log.d("x", "Button is onEventAnimationEnd");
-
-                action.onAction(index, letter);
-            }
-
             @Override
             public void onEventAnimationStart(ImageView button, boolean buttonState) {
-                Log.d("x", "Button is onEventAnimationStart");
+                sparkButton.setEnabled(false);
+            }
+            @Override
+            public void onEventAnimationEnd(ImageView button, boolean buttonState) {
+                action.onAction(index, letter);
             }
         });
     }
@@ -83,7 +65,10 @@ public class LetterView {
 
     public void setColor(int color) {
         this.color = color;
-        this.sparkButton.setColors(Color.RED, Color.MAGENTA);
+        this.sparkButton.setColors(Color.GREEN, Color.YELLOW);
+
+        Drawable activeDrawable = TextDrawable.builder().buildRound(letter, color);
+        this.sparkButton.setActiveImage(activeDrawable);
     }
 
     public void setSize(double size) {
