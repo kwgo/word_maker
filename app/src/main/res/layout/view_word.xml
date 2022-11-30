@@ -16,85 +16,83 @@
 
         <com.jchip.word.maker.spark.SparkButton
             android:id="@+id/view_letter_0"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-             app:sparkbutton_iconSize="30dp"
-            app:sparkbutton_primaryColor="@color/heart_primary_color" />
+            app:sparkbutton_iconSize="60dp" />
 
         <com.jchip.word.maker.spark.SparkButton
             android:id="@+id/view_letter_1"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            app:sparkbutton_activeImage="@drawable/ic_heart_on"
-            app:sparkbutton_iconSize="30dp"
-            app:sparkbutton_primaryColor="@color/heart_primary_color" />
+            app:sparkbutton_iconSize="60dp" />
+
         <com.jchip.word.maker.spark.SparkButton
             android:id="@+id/view_letter_2"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            app:sparkbutton_activeImage="@drawable/ic_heart_on"
-            app:sparkbutton_iconSize="30dp"
-            app:sparkbutton_primaryColor="@color/heart_primary_color" />
+            app:sparkbutton_iconSize="60dp" />
+
         <com.jchip.word.maker.spark.SparkButton
             android:id="@+id/view_letter_3"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            app:sparkbutton_activeImage="@drawable/ic_heart_on"
-            app:sparkbutton_iconSize="30dp"
-            app:sparkbutton_primaryColor="@color/heart_primary_color" />
+            app:sparkbutton_iconSize="60dp" />
+
         <com.jchip.word.maker.spark.SparkButton
             android:id="@+id/view_letter_4"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            app:sparkbutton_activeImage="@drawable/ic_heart_on"
-            app:sparkbutton_iconSize="30dp"
-            app:sparkbutton_primaryColor="@color/heart_primary_color" />
+
+            app:sparkbutton_iconSize="60dp" />
+
         <com.jchip.word.maker.spark.SparkButton
             android:id="@+id/view_letter_5"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            app:sparkbutton_activeImage="@drawable/ic_heart_on"
-            app:sparkbutton_iconSize="30dp"
-            app:sparkbutton_primaryColor="@color/heart_primary_color" />
+
+            app:sparkbutton_iconSize="60dp" />
+
         <com.jchip.word.maker.spark.SparkButton
             android:id="@+id/view_letter_6"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            app:sparkbutton_activeImage="@drawable/ic_heart_on"
-            app:sparkbutton_iconSize="30dp"
-            app:sparkbutton_primaryColor="@color/heart_primary_color" />
+
+            app:sparkbutton_iconSize="60dp" />
+
         <com.jchip.word.maker.spark.SparkButton
             android:id="@+id/view_letter_7"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            app:sparkbutton_activeImage="@drawable/ic_heart_on"
-            app:sparkbutton_iconSize="30dp"
-            app:sparkbutton_primaryColor="@color/heart_primary_color" />
+
+            app:sparkbutton_iconSize="60dp" />
+
         <com.jchip.word.maker.spark.SparkButton
             android:id="@+id/view_letter_8"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            app:sparkbutton_activeImage="@drawable/ic_heart_on"
-            app:sparkbutton_iconSize="30dp"
-            app:sparkbutton_primaryColor="@color/heart_primary_color" />
+
+            app:sparkbutton_iconSize="60dp" />
 
     </GridLayout>
 </LinearLayout>

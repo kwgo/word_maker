@@ -2,14 +2,20 @@ package com.jchip.word.maker.viewer;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.jchip.word.maker.R;
+import com.jchip.word.maker.image.TextDrawable;
 import com.jchip.word.maker.spark.SparkButton;
+import com.jchip.word.maker.spark.SparkEventListener;
 
 public class LetterView {
 
     private Activity activity;
+    private int index;
     private String letter;
     private ActionListener action;
 
@@ -22,16 +28,53 @@ public class LetterView {
 
     public LetterView(Activity activity, int index, String letter, ActionListener action) {
         this.activity = activity;
+        this.index = index;
         this.letter = letter;
         this.action = action;
 
         int id = activity.getResources().getIdentifier("view_letter_" + index, "id", activity.getPackageName());
         this.sparkButton = activity.findViewById(id);
 
-        this.sparkButton.setActiveImage(R.drawable.ic_thumb);
-        this.sparkButton.setInactiveImage(R.drawable.ic_star_off);
+        Drawable inactiveDrawable = TextDrawable.builder().buildRound(letter, Color.LTGRAY);
+        Drawable activeDrawable = TextDrawable.builder().buildRound(letter, Color.RED);
+
+        this.sparkButton.setActiveImage(activeDrawable);
+        this.sparkButton.setInactiveImage(inactiveDrawable);
 
         this.sparkButton.setColors(Color.RED, Color.CYAN);
+
+        this.sparkButton.setEventListener(new SparkEventListener(){
+//            @Override
+//            void onEvent(ImageView button, boolean buttonState) {
+//                if (buttonState) {
+//                    // Button is active
+//                } else {
+//                    // Button is inactive
+//                }
+//            }
+
+            @Override
+            public void onEvent(ImageView button, boolean buttonState) {
+                if (buttonState) {
+                    Log.d("x", "Button is active");
+                    sparkButton.setEnabled(false);
+                } else {
+                    Log.d("x", "Button is inactive");
+                }
+            }
+
+            @Override
+            public void onEventAnimationEnd(ImageView button, boolean buttonState) {
+                Log.d("x", "Button is onEventAnimationEnd");
+
+                action.onAction(index, letter);
+            }
+
+            @Override
+            public void onEventAnimationStart(ImageView button, boolean buttonState) {
+                Log.d("x", "Button is onEventAnimationStart");
+            }
+        });
     }
 
     public void setTapped(boolean tapped) {

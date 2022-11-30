@@ -1,6 +1,8 @@
 package com.jchip.word.maker.spark;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
+
 /**
  * @author varun on 07/07/16.
  */
@@ -13,13 +15,13 @@ public class SparkButtonBuilder {
         sparkButton = new SparkButton(context);
     }
 
-    public SparkButtonBuilder setActiveImage(int resourceId) {
-        sparkButton.imageResourceIdActive = resourceId;
+    public SparkButtonBuilder setActiveImage(Drawable drawable) {
+        sparkButton.imageActiveDrawable = drawable;
         return this;
     }
 
-    public SparkButtonBuilder setInactiveImage(int resourceId) {
-        sparkButton.imageResourceIdInactive = resourceId;
+    public SparkButtonBuilder setInactiveImage(Drawable drawable) {
+        sparkButton.imageInactiveDrawable = drawable;
         return this;
     }
 
