@@ -3,9 +3,7 @@ package com.jchip.word.maker.viewer;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,7 +36,8 @@ public class ResultView {
         ImageView returnButton = activity.findViewById(R.id.view_return);
         returnButton.setImageResource(success ? R.drawable.game_success : hint ? R.drawable.game_hint : R.drawable.game_fail);
 
-
+        ImageView returnView = activity.findViewById(R.id.view_return);
+        returnView.setOnClickListener((v) -> this.onContinue(success));
     }
 
     private boolean isSuccess() {
@@ -46,8 +45,6 @@ public class ResultView {
         if (!success) {
             List<String> words = WordHelper.instance().getWords();
             for (String word : words) {
-                Log.d("Xx", "comare word=" + word);
-                Log.d("Xx", "comare resultWord=" + resultWord);
                 if (word.equals(this.resultWord)) {
                     return true;
                 }

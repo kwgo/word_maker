@@ -70,7 +70,6 @@ public class WordHelper {
 
     public void loadWords(Context context) {
         if (this.words == null) {
-            Log.d("X", "start loading words..............");
             this.words = new ArrayList<>();
             for (int index = 3; index <= 9; index++) {
                 this.words.add(this.loadWords(context, index));
@@ -85,19 +84,21 @@ public class WordHelper {
         List<String> lines = new ArrayList<>();
         try {
             int id = context.getResources().getIdentifier("word_" + index, "raw", context.getPackageName());
-       Log.d("", "id=" + id);
+            Log.d("", "id=" + id);
             InputStream file = context.getResources().openRawResource(id);
             BufferedReader reader = new BufferedReader(new InputStreamReader(file));
-            String line = null;
-            do {
-                line = reader.readLine();
+            while (true) {
+                String line = reader.readLine();
+                if (line == null) {
+                    break;
+                }
                 lines.add(line);
-            } while (line != null);
+            }
         } catch (Exception error) {
             Log.d("Fatal Error: ", error.toString());
         }
 
-        Log.d("", "len number:"+lines.size());
+        Log.d("", "len number:" + lines.size());
         return lines;
     }
 
