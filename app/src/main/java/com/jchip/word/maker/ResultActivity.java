@@ -4,14 +4,15 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.jchip.word.maker.viewer.GameView;
+import com.jchip.word.maker.viewer.ResultView;
 
-public class GameActivity extends AppCompatActivity {
+public class ResultActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
+        setContentView(R.layout.activity_result);
 
-        new GameView(this);
+        new ResultView(this);
     }
 }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/game_background"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -13,7 +14,6 @@
         android:layout_height="1dp" />
 
     <LinearLayout
-        android:id="@+id/title_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -22,12 +22,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name_0" />
+            android:text="@string/app_name_0"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name_1" />
+            android:text="@string/app_name_1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp" />
     </LinearLayout>
 
     <Space
@@ -35,7 +39,6 @@
         android:layout_height="1dp" />
 
     <include
-        android:id="@+id/view_select"
         layout="@layout/view_word"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

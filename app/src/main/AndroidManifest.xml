@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MakeAWord"
         tools:targetApi="31">
         <activity
-            android:name=".HintActivity"
+            android:name=".ResultActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

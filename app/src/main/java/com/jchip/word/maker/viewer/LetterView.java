@@ -34,6 +34,7 @@ public class LetterView {
 
         int id = activity.getResources().getIdentifier("view_letter_" + index, "id", activity.getPackageName());
         this.sparkButton = activity.findViewById(id);
+        this.sparkButton.setVisibility(letter.trim().isEmpty() ? View.INVISIBLE : View.VISIBLE);
 
         Drawable inactiveDrawable = TextDrawable.builder().buildRound(letter, Color.LTGRAY);
         this.sparkButton.setInactiveImage(inactiveDrawable);
@@ -44,8 +45,6 @@ public class LetterView {
             @Override
             public void onEvent(ImageView button, boolean buttonState) {
                 if (buttonState) {
-                    sparkButton.setScaleX(2);
-                    sparkButton.setScaleY(2);
                 }
             }
             @Override
@@ -54,7 +53,10 @@ public class LetterView {
             }
             @Override
             public void onEventAnimationEnd(ImageView button, boolean buttonState) {
+                sparkButton.setScaleX(2);
+                sparkButton.setScaleY(2);
                 action.onAction(index, letter);
+
             }
         });
     }

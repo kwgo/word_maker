@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.jchip.word.maker.wear.databinding.ActivityHintBinding;
 
-public class HintActivity extends Activity {
+public class ResultActivity extends Activity {
 
     private TextView mTextView;
     private ActivityHintBinding binding;
