@@ -38,7 +38,6 @@ public class GameView {
         }
     }
 
-
     private String getTitle() {
         StringBuilder title = new StringBuilder();
         title.append(WordHelper.instance().getBookIndex() + 3);

@@ -17,6 +17,8 @@ public class ResultView {
     private String word;
     private String resultWord;
 
+    private boolean success = false;
+
     public ResultView(Activity activity) {
         this.activity = activity;
 
@@ -27,7 +29,7 @@ public class ResultView {
         }
         Log.d("word", "load word===" + word);
         Log.d("word", "loas resultWord===" + resultWord);
-        boolean success = this.isSuccess();
+        this.success = this.isSuccess();
         boolean hint = this.isHint();
 
         TextView titleView = activity.findViewById(R.id.view_title);
@@ -37,7 +39,7 @@ public class ResultView {
         returnButton.setImageResource(success ? R.drawable.game_success : hint ? R.drawable.game_hint : R.drawable.game_fail);
 
         ImageView returnView = activity.findViewById(R.id.view_return);
-        returnView.setOnClickListener((v) -> this.onContinue(success));
+        returnView.setOnClickListener((v) -> this.onContinue());
     }
 
     private boolean isSuccess() {
@@ -57,10 +59,11 @@ public class ResultView {
         return "[HINT]".equals(this.resultWord);
     }
 
-    private void onContinue(boolean success) {
-        WordHelper.instance().setWordIndex(success);
-        WordHelper.instance().saveNumbers(this.activity);
-
+    public void onContinue() {
+        if(this.success) {
+            WordHelper.instance().setNextWord();
+            WordHelper.instance().saveNumbers(this.activity);
+        }
         activity.startActivity(new Intent(activity, GameActivity.class));
     }
 }

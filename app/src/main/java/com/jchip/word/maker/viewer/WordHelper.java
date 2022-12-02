@@ -54,14 +54,12 @@ public class WordHelper {
         return this.words.get(this.bookIndex).size();
     }
 
-    public void setWordIndex(boolean next) {
-        if (next) {
-            this.wordIndex = this.wordIndex + 1;
-            if (this.wordIndex >= this.words.get(this.bookIndex).size()) {
-                this.wordIndex = this.words.get(this.bookIndex).size() - 1;
-            }
-            this.numbers.set(this.bookIndex, this.wordIndex);
+    public void setNextWord() {
+        this.wordIndex = this.wordIndex + 1;
+        if (this.wordIndex >= this.words.get(this.bookIndex).size()) {
+            this.wordIndex = this.words.get(this.bookIndex).size() - 1;
         }
+        this.numbers.set(this.bookIndex, this.wordIndex);
     }
 
     public String getWord() {
