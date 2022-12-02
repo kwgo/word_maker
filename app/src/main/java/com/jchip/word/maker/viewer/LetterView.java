@@ -3,8 +3,6 @@ package com.jchip.word.maker.viewer;
 import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -16,25 +14,26 @@ import com.jchip.word.maker.spark.SparkButton;
 import com.jchip.word.maker.spark.SparkEventListener;
 
 public class LetterView {
-
     private Activity activity;
-    private int index;
     private String letter;
-    private ActionListener action;
+    private float fontSize = 60;
 
     private SparkButton sparkButton;
 
-    public LetterView(Activity activity, int index, String letter, ActionListener action) {
+    public LetterView(Activity activity, int index, String letter, float fontSize, ActionListener action) {
         this.activity = activity;
-        this.index = index;
         this.letter = letter;
-        this.action = action;
+        this.fontSize = fontSize;
 
         int id = activity.getResources().getIdentifier("view_letter_" + index, "id", activity.getPackageName());
         this.sparkButton = activity.findViewById(id);
+        this.sparkButton.setInactiveImage(this.getImageBuilder().buildRound(letter, Color.TRANSPARENT));
         this.sparkButton.setVisibility(letter.trim().isEmpty() ? View.INVISIBLE : View.VISIBLE);
 
-        this.sparkButton.setInactiveImage(this.getImageBuilder().buildRound(letter, Color.TRANSPARENT));
+        int size = this.spToPx(90);
+        this.sparkButton.getLayoutParams().width = size;
+        this.sparkButton.getLayoutParams().height = size;
+        this.sparkButton.setIconSize(size / 2);
 
         this.sparkButton.setEventListener(new SparkEventListener() {
             @Override
@@ -50,16 +49,12 @@ public class LetterView {
 
             @Override
             public void onEventAnimationEnd(ImageView button, boolean buttonState) {
-                sparkButton.setScaleX(2);
-                sparkButton.setScaleY(2);
+                sparkButton.setScaleX(1.2f);
+                sparkButton.setScaleY(1.2f);
                 action.onAction(index, letter);
             }
         });
     }
-
-    // public void setTapped(boolean tapped) {
-    //      this.tapped = tapped;
-    //   }
 
     public void setColor(int color) {
         this.sparkButton.setColors(Color.GREEN, Color.YELLOW);
@@ -67,13 +62,15 @@ public class LetterView {
     }
 
     private TextDrawable.Builder getImageBuilder() {
-        float sp = 60;
-        float px = sp * this.activity.getResources().getDisplayMetrics().scaledDensity;
         Typeface typeface = ResourcesCompat.getFont(this.activity, R.font.aldrich);
         return (TextDrawable.Builder) TextDrawable.builder()
                 .beginConfig()
                 .useFont(typeface)
-                .fontSize((int) px)
+                .fontSize(this.spToPx(this.fontSize))
                 .endConfig();
+    }
+
+    private int spToPx(float sp) {
+        return (int) (sp * this.activity.getResources().getDisplayMetrics().scaledDensity);
     }
 }

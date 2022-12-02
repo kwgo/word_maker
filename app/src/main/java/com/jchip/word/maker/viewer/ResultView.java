@@ -1,9 +1,7 @@
-
 package com.jchip.word.maker.viewer;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 

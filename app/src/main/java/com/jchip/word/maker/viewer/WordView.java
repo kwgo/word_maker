@@ -11,11 +11,9 @@ import java.util.List;
 public class WordView {
     private Activity activity;
     private String word;
-    private double size = 60;
     private ActionListener action;
 
     private LetterView[] letterViews = new LetterView[9];
-
 
     private int[] colors = {
             Color.RED, Color.DKGRAY, Color.YELLOW, Color.GREEN, Color.CYAN, Color.BLUE, Color.DKGRAY, Color.BLACK, Color.LTGRAY
@@ -23,14 +21,14 @@ public class WordView {
 
     private int colorIndex = 0;
 
-    public WordView(Activity activity, String word, ActionListener action) {
+    public WordView(Activity activity, String word, float fontSize, ActionListener action) {
         this.activity = activity;
         this.word = word;
         this.action = action;
 
         List<String> letters = this.getLetters();
         for (int index = 0; index < letterViews.length; index++) {
-            letterViews[index] = new LetterView(activity, index, letters.get(index), this::onAction);
+            letterViews[index] = new LetterView(activity, index, letters.get(index), fontSize, this::onAction);
             letterViews[index].setColor(this.colors[this.colorIndex]);
         }
     }

@@ -88,6 +88,10 @@ public class SparkButton extends FrameLayout implements View.OnClickListener {
         updateView();
     }
 
+    public void setIconSize(int imageSize) {
+        this.imageSize = imageSize;
+    }
+
     private void updateView() {
         circleView.setColors(secondaryColor, primaryColor);
         dotsView.setColors(secondaryColor, primaryColor);

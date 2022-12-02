@@ -2,12 +2,9 @@ package com.jchip.word.maker.viewer;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.util.Log;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.jchip.word.maker.GameActivity;
 import com.jchip.word.maker.R;
 import com.jchip.word.maker.ResultActivity;
 
@@ -22,7 +19,7 @@ public class GameView {
         WordHelper.instance().loadWords(activity);
 
         this.word = WordHelper.instance().getWord();
-        new WordView(activity, word, this::onAction);
+        new WordView(activity, word, 70, this::onAction);
 
         TextView titleView = activity.findViewById(R.id.view_title);
         titleView.setText(this.getTitle());

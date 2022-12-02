@@ -2,7 +2,6 @@ package com.jchip.word.maker.viewer;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
 
 import com.jchip.word.maker.GameActivity;
 
@@ -12,7 +11,7 @@ public class MainView {
     public MainView(Activity activity) {
         this.activity = activity;
 
-        new WordView(activity, "3456789", this::onAction);
+        new WordView(activity, "3456789", 60, this::onAction);
     }
 
     private void onAction(int index, String letter) {
