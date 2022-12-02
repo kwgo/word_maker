@@ -27,8 +27,6 @@ public class ResultView {
         if (this.word == null || this.resultWord == null) {
             activity.finish();
         }
-        Log.d("word", "load word===" + word);
-        Log.d("word", "loas resultWord===" + resultWord);
         this.success = this.isSuccess();
         boolean hint = this.isHint();
 

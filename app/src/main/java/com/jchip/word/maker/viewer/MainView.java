@@ -8,8 +8,6 @@ import com.jchip.word.maker.GameActivity;
 
 public class MainView {
     private Activity activity;
-    private String word = "";
-    private String resultWord = "";
 
     public MainView(Activity activity) {
         this.activity = activity;
