@@ -51,7 +51,7 @@ public class WordView {
             this.colorIndex = (this.colorIndex + 1) % 9;
             for (int offset = index + 1; offset < 9; offset++) {
                 this.letterViews[index].setColor(this.colors[this.colorIndex]);
-                this.letterViews[index].setSize(this.size);
+                //this.letterViews[index].setSize(this.size);
             }
             this.action.onAction(index, letter);
         }

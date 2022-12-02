@@ -15,6 +15,9 @@ import android.graphics.drawable.shapes.OvalShape;
 import android.graphics.drawable.shapes.RectShape;
 import android.graphics.drawable.shapes.RoundRectShape;
 
+import androidx.core.content.res.ResourcesCompat;
+import com.jchip.word.maker.R;
+
 /**
  * @author amulya
  * @datetime 14 Oct 2014, 3:53 PM
@@ -173,6 +176,7 @@ public class TextDrawable extends ShapeDrawable {
             height = -1;
             shape = new RectShape();
             font = Typeface.create("sans-serif-light", Typeface.NORMAL);
+            //font = ResourcesCompat.getFont(this, R.font.aldrich);
             fontSize = -1;
             isBold = false;
             toUpperCase = false;

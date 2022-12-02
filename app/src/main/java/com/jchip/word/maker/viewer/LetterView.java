@@ -2,10 +2,13 @@ package com.jchip.word.maker.viewer;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.core.content.res.ResourcesCompat;
 
 import com.jchip.word.maker.R;
 import com.jchip.word.maker.image.TextDrawable;
@@ -21,11 +24,6 @@ public class LetterView {
 
     private SparkButton sparkButton;
 
-
-    private boolean tapped;
-    private int color;
-    private double size;
-
     public LetterView(Activity activity, int index, String letter, ActionListener action) {
         this.activity = activity;
         this.index = index;
@@ -36,45 +34,46 @@ public class LetterView {
         this.sparkButton = activity.findViewById(id);
         this.sparkButton.setVisibility(letter.trim().isEmpty() ? View.INVISIBLE : View.VISIBLE);
 
-        Drawable inactiveDrawable = TextDrawable.builder().buildRound(letter, Color.LTGRAY);
-        this.sparkButton.setInactiveImage(inactiveDrawable);
+        this.sparkButton.setInactiveImage(this.getImageBuilder().buildRound(letter, Color.TRANSPARENT));
 
-        //this.sparkButton.setColors(Color.GREEN, Color.CYAN);
-
-        this.sparkButton.setEventListener(new SparkEventListener(){
+        this.sparkButton.setEventListener(new SparkEventListener() {
             @Override
             public void onEvent(ImageView button, boolean buttonState) {
                 if (buttonState) {
                 }
             }
+
             @Override
             public void onEventAnimationStart(ImageView button, boolean buttonState) {
                 sparkButton.setEnabled(false);
             }
+
             @Override
             public void onEventAnimationEnd(ImageView button, boolean buttonState) {
                 sparkButton.setScaleX(2);
                 sparkButton.setScaleY(2);
                 action.onAction(index, letter);
-
             }
         });
     }
 
-    public void setTapped(boolean tapped) {
-        this.tapped = tapped;
-    }
+    // public void setTapped(boolean tapped) {
+    //      this.tapped = tapped;
+    //   }
 
     public void setColor(int color) {
-        this.color = color;
         this.sparkButton.setColors(Color.GREEN, Color.YELLOW);
-
-        Drawable activeDrawable = TextDrawable.builder().buildRound(letter, color);
-        this.sparkButton.setActiveImage(activeDrawable);
+        this.sparkButton.setActiveImage(this.getImageBuilder().buildRound(letter, color));
     }
 
-    public void setSize(double size) {
-        this.size = size;
+    private TextDrawable.Builder getImageBuilder() {
+        float sp = 60;
+        float px = sp * this.activity.getResources().getDisplayMetrics().scaledDensity;
+        Typeface typeface = ResourcesCompat.getFont(this.activity, R.font.aldrich);
+        return (TextDrawable.Builder) TextDrawable.builder()
+                .beginConfig()
+                .useFont(typeface)
+                .fontSize((int) px)
+                .endConfig();
     }
-
 }
