@@ -17,8 +17,8 @@
         android:id="@+id/view_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimary"
-        android:textSize="50sp" />
+        android:textColor="@color/title"
+        android:textSize=50sp" />
 
     <Space
         android:layout_width="match_parent"
