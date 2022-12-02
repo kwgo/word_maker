@@ -1,8 +1,12 @@
 package com.jchip.word.maker.viewer;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.graphics.Typeface;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -30,10 +34,10 @@ public class LetterView {
         this.sparkButton.setInactiveImage(this.getImageBuilder().buildRound(letter, Color.TRANSPARENT));
         this.sparkButton.setVisibility(letter.trim().isEmpty() ? View.INVISIBLE : View.VISIBLE);
 
-        int size = this.spToPx(90);
+        int size = this.getSize();
         this.sparkButton.getLayoutParams().width = size;
         this.sparkButton.getLayoutParams().height = size;
-        this.sparkButton.setIconSize(size / 2);
+        this.sparkButton.setIconSize(60);
 
         this.sparkButton.setEventListener(new SparkEventListener() {
             @Override
@@ -72,5 +76,22 @@ public class LetterView {
 
     private int spToPx(float sp) {
         return (int) (sp * this.activity.getResources().getDisplayMetrics().scaledDensity);
+    }
+
+    public float pxToDp(int px) {
+        return px / ((float) this.activity.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT);
+    }
+
+    public int dpToPx(float dp) {
+        return (int) (dp * ((float) this.activity.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+    }
+
+    private int getSize() {
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        this.activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int size = Math.min(displayMetrics.widthPixels, displayMetrics.heightPixels);
+
+        Log.d("", "button size =" + (this.pxToDp(size / 3)));
+        return Math.min(size / 3, this.dpToPx(120f));
     }
 }

@@ -54,4 +54,5 @@ public class WordView {
             this.action.onAction(index, letter);
         }
     }
+
 }
