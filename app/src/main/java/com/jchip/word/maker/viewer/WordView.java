@@ -12,6 +12,7 @@ public class WordView {
     private ActionListener action;
 
     private LetterView[] letterViews = new LetterView[9];
+    private int[] letterColors = {-1, -1, -1, -1, -1, -1, -1, -1, -1};
 
     private int colorIndex = 0;
 
@@ -37,9 +38,12 @@ public class WordView {
 
     private void onAction(int index, String letter) {
         if (!letter.trim().isEmpty()) {
+            this.letterColors[index] = this.colorIndex;
             this.colorIndex = (this.colorIndex + 1) % 9;
-            for (int offset = index + 1; offset < 9; offset++) {
-                this.letterViews[index].setColor(this.colorIndex);
+            for (int offset = 0; offset < 9; offset++) {
+                if (this.letterColors[offset] < 0) {
+                    this.letterViews[offset].setColor(this.colorIndex);
+                }
             }
             this.action.onAction(index, letter);
         }
