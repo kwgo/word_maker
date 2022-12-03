@@ -1,9 +1,7 @@
 package com.jchip.word.maker.viewer;
 
 import android.app.Activity;
-import android.content.Context;
 import android.graphics.Color;
-import android.graphics.Point;
 import android.graphics.Typeface;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -20,14 +18,24 @@ import com.jchip.word.maker.spark.SparkEventListener;
 public class LetterView {
     private Activity activity;
     private String letter;
+    private int index;
     private float fontSize = 60;
+    private ActionListener action;
+
+    private static int[] colors = {
+            Color.RED, Color.parseColor("#ED7014"), Color.YELLOW,
+            Color.GREEN, Color.CYAN, Color.BLUE,
+            Color.parseColor("#E11584"), Color.parseColor("#80471C"), Color.parseColor("#A32CC4")
+    };
 
     private SparkButton sparkButton;
 
     public LetterView(Activity activity, int index, String letter, float fontSize, ActionListener action) {
         this.activity = activity;
         this.letter = letter;
+        this.index = index;
         this.fontSize = fontSize;
+        this.action = action;
 
         int id = activity.getResources().getIdentifier("view_letter_" + index, "id", activity.getPackageName());
         this.sparkButton = activity.findViewById(id);
@@ -39,35 +47,37 @@ public class LetterView {
         this.sparkButton.getLayoutParams().height = size;
         this.sparkButton.setIconSize(this.dpToPx(100));
         this.sparkButton.setAnimationSpeed(1.5f);
+        this.sparkButton.setColors(Color.GREEN, Color.YELLOW);
+        this.sparkButton.setEventListener(this.viewListener);
 
-        this.sparkButton.setEventListener(new SparkEventListener() {
-            @Override
-            public void onEvent(ImageView button, boolean buttonState) {
-                if (buttonState) {
-                }
-            }
-
-            @Override
-            public void onEventAnimationStart(ImageView button, boolean buttonState) {
-                sparkButton.setEnabled(false);
-            }
-
-            @Override
-            public void onEventAnimationEnd(ImageView button, boolean buttonState) {
-                //sparkButton.setScaleX(1.2f);
-                //sparkButton.setScaleY(1.2f);
-                action.onAction(index, letter);
-            }
-        });
+        this.setColor(0);
     }
+
+    private SparkEventListener viewListener = new SparkEventListener() {
+        @Override
+        public void onEvent(ImageView button, boolean buttonState) {
+        }
+
+        @Override
+        public void onEventAnimationStart(ImageView button, boolean buttonState) {
+            sparkButton.setEnabled(false);
+        }
+
+        @Override
+        public void onEventAnimationEnd(ImageView button, boolean buttonState) {
+            //sparkButton.setScaleX(1.2f);
+            //sparkButton.setScaleY(1.2f);
+            action.onAction(index, letter);
+        }
+    };
 
     public void setViewEnable(boolean enable) {
         this.sparkButton.setEnabled(enable);
     }
 
-    public void setColor(int color) {
-        this.sparkButton.setColors(Color.GREEN, Color.YELLOW);
-        this.sparkButton.setActiveImage(this.getImageBuilder().buildRound(letter, color));
+    public void setColor(int colorIndex) {
+        //this.sparkButton.setColors(this.colors[(colorIndex + 4) %9], this.colors[colorIndex]);
+        this.sparkButton.setActiveImage(this.getImageBuilder().buildRound(letter, this.colors[colorIndex]));
     }
 
     private TextDrawable.Builder getImageBuilder() {
