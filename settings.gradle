@@ -14,4 +14,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Make a Word"
 include ':app'
-include ':wear'
