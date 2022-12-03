@@ -39,8 +39,6 @@ public class LetterView {
 
         int id = activity.getResources().getIdentifier("view_letter_" + index, "id", activity.getPackageName());
         this.sparkButton = activity.findViewById(id);
-        this.sparkButton.setInactiveImage(this.getImageBuilder().buildRound(letter, Color.TRANSPARENT));
-        this.sparkButton.setVisibility(letter.trim().isEmpty() ? View.INVISIBLE : View.VISIBLE);
 
         int size = this.getSize();
         this.sparkButton.getLayoutParams().width = size;
@@ -48,6 +46,10 @@ public class LetterView {
         this.sparkButton.setIconSize(this.dpToPx(100));
         this.sparkButton.setAnimationSpeed(2.5f);
         this.sparkButton.setColors(Color.GREEN, Color.YELLOW);
+
+        this.sparkButton.setInactiveImage(this.getImageBuilder().buildRound(letter, Color.TRANSPARENT));
+        this.sparkButton.setVisibility(letter.trim().isEmpty() ? View.INVISIBLE : View.VISIBLE);
+
         this.sparkButton.setEventListener(this.viewListener);
 
         this.setColor(0);
