@@ -19,7 +19,7 @@ public class LetterView {
     private Activity activity;
     private String letter;
     private int index;
-    private float fontSize = 60;
+    private float fontSize;
     private ActionListener action;
 
     private static int[] colors = {
@@ -46,7 +46,7 @@ public class LetterView {
         this.sparkButton.getLayoutParams().width = size;
         this.sparkButton.getLayoutParams().height = size;
         this.sparkButton.setIconSize(this.dpToPx(100));
-        this.sparkButton.setAnimationSpeed(1.5f);
+        this.sparkButton.setAnimationSpeed(2.5f);
         this.sparkButton.setColors(Color.GREEN, Color.YELLOW);
         this.sparkButton.setEventListener(this.viewListener);
 
@@ -77,7 +77,7 @@ public class LetterView {
 
     public void setColor(int colorIndex) {
         //this.sparkButton.setColors(this.colors[(colorIndex + 4) %9], this.colors[colorIndex]);
-        this.sparkButton.setActiveImage(this.getImageBuilder().buildRound(letter, this.colors[colorIndex]));
+        this.sparkButton.setActiveImage(this.getImageBuilder().buildRound(letter, LetterView.colors[colorIndex]));
     }
 
     private TextDrawable.Builder getImageBuilder() {
