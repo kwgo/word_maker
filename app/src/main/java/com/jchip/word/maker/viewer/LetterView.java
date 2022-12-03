@@ -76,7 +76,6 @@ public class LetterView {
     }
 
     public void setColor(int colorIndex) {
-        //this.sparkButton.setColors(this.colors[(colorIndex + 4) %9], this.colors[colorIndex]);
         this.sparkButton.setActiveImage(this.getImageBuilder().buildRound(letter, LetterView.colors[colorIndex]));
     }
 
