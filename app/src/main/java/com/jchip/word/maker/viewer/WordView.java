@@ -1,8 +1,6 @@
 package com.jchip.word.maker.viewer;
 
 import android.app.Activity;
-import android.graphics.Color;
-import android.util.Log;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -15,10 +13,6 @@ public class WordView {
 
     private LetterView[] letterViews = new LetterView[9];
 
-    private int[] colors = {
-            Color.RED, Color.DKGRAY, Color.YELLOW, Color.GREEN, Color.CYAN, Color.BLUE, Color.DKGRAY, Color.BLACK, Color.LTGRAY
-    };
-
     private int colorIndex = 0;
 
     public WordView(Activity activity, String word, float fontSize, ActionListener action) {
@@ -29,7 +23,6 @@ public class WordView {
         List<String> letters = this.getLetters();
         for (int index = 0; index < letterViews.length; index++) {
             letterViews[index] = new LetterView(activity, index, letters.get(index), fontSize, this::onAction);
-            letterViews[index].setColor(this.colors[this.colorIndex]);
         }
     }
 
@@ -46,19 +39,15 @@ public class WordView {
         if (!letter.trim().isEmpty()) {
             this.colorIndex = (this.colorIndex + 1) % 9;
             for (int offset = index + 1; offset < 9; offset++) {
-                this.letterViews[index].setColor(this.colors[this.colorIndex]);
-                //this.letterViews[index].setSize(this.size);
+                this.letterViews[index].setColor(this.colorIndex);
             }
             this.action.onAction(index, letter);
         }
     }
 
     public void setViewEnable(boolean enable) {
-        Log.d("", "start ==============================");
         for (LetterView letterView : this.letterViews) {
             letterView.setViewEnable(enable);
         }
-        Log.d("", "end ==============================");
-
     }
 }

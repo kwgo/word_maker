@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
         setContentView(binding.getRoot());
 
 
-        WordView WordView = new WordView(this, "3456789", this::onAction);
+        WordView WordView = new WordView(this, "3456789", 48, this::onAction);
     }
 
     private void onAction(int index, String number) {
