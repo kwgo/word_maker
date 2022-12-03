@@ -7,14 +7,16 @@ import com.jchip.word.maker.GameActivity;
 
 public class MainView {
     private Activity activity;
-
+    private WordView wordView;
     public MainView(Activity activity) {
         this.activity = activity;
 
-        new WordView(activity, "3456789", 60, this::onAction);
+        this.wordView = new WordView(activity, "3456789", 48, this::onAction);
     }
 
     private void onAction(int index, String letter) {
+        //this.wordView.setViewEnable(false);
+
         index = Integer.parseInt(letter) - 3;
 
         WordHelper.instance().loadWords(this.activity);

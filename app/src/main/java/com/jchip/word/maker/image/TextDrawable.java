@@ -14,6 +14,7 @@ import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.graphics.drawable.shapes.RectShape;
 import android.graphics.drawable.shapes.RoundRectShape;
+import android.util.Log;
 
 import androidx.core.content.res.ResourcesCompat;
 import com.jchip.word.maker.R;
@@ -84,6 +85,7 @@ public class TextDrawable extends ShapeDrawable {
     public void draw(Canvas canvas) {
         super.draw(canvas);
         Rect r = getBounds();
+Log.d("X", "area =====" + r);
 
         // draw border
         if (borderThickness > 0) {

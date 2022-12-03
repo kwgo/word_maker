@@ -95,8 +95,6 @@ public class WordHelper {
         } catch (Exception error) {
             Log.d("Fatal Error: ", error.toString());
         }
-
-        Log.d("", "len number:" + lines.size());
         return lines;
     }
 

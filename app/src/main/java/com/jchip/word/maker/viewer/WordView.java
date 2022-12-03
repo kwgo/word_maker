@@ -43,8 +43,6 @@ public class WordView {
     }
 
     private void onAction(int index, String letter) {
-        Log.d("X", "letter=" + letter);
-
         if (!letter.trim().isEmpty()) {
             this.colorIndex = (this.colorIndex + 1) % 9;
             for (int offset = index + 1; offset < 9; offset++) {
@@ -55,4 +53,12 @@ public class WordView {
         }
     }
 
+    public void setViewEnable(boolean enable) {
+        Log.d("", "start ==============================");
+        for (LetterView letterView : this.letterViews) {
+            letterView.setViewEnable(enable);
+        }
+        Log.d("", "end ==============================");
+
+    }
 }

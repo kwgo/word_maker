@@ -37,7 +37,8 @@ public class LetterView {
         int size = this.getSize();
         this.sparkButton.getLayoutParams().width = size;
         this.sparkButton.getLayoutParams().height = size;
-        this.sparkButton.setIconSize(60);
+        this.sparkButton.setIconSize(this.dpToPx(100));
+        this.sparkButton.setAnimationSpeed(1.5f);
 
         this.sparkButton.setEventListener(new SparkEventListener() {
             @Override
@@ -53,11 +54,15 @@ public class LetterView {
 
             @Override
             public void onEventAnimationEnd(ImageView button, boolean buttonState) {
-                sparkButton.setScaleX(1.2f);
-                sparkButton.setScaleY(1.2f);
+                //sparkButton.setScaleX(1.2f);
+                //sparkButton.setScaleY(1.2f);
                 action.onAction(index, letter);
             }
         });
+    }
+
+    public void setViewEnable(boolean enable) {
+        this.sparkButton.setEnabled(enable);
     }
 
     public void setColor(int color) {

@@ -19,7 +19,7 @@ public class GameView {
         WordHelper.instance().loadWords(activity);
 
         this.word = WordHelper.instance().getWord();
-        new WordView(activity, word, 70, this::onAction);
+        new WordView(activity, word, 50, this::onAction);
 
         TextView titleView = activity.findViewById(R.id.view_title);
         titleView.setText(this.getTitle());

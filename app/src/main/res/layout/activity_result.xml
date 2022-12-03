@@ -28,7 +28,8 @@
     <ImageView
         android:id="@+id/view_return"
         android:layout_width="100dp"
-        android:layout_height="100dp" />
+        android:layout_height="100dp"
+        android:background="?attr/selectableItemBackgroundBorderless" />
 
     <Space
         android:layout_width="match_parent"
