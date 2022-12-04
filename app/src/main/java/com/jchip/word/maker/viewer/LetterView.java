@@ -106,6 +106,6 @@ public class LetterView {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         this.activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int size = Math.min(displayMetrics.widthPixels, displayMetrics.heightPixels);
-        return Math.min(size / 3, this.dpToPx(120f));
+        return Math.min(size / 3, this.dpToPx(240f));
     }
 }
