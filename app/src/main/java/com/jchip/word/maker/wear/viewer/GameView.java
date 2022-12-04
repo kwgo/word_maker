@@ -2,6 +2,7 @@ package com.jchip.word.maker.wear.viewer;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,8 +22,11 @@ public class GameView {
         this.word = WordHelper.instance().getWord();
         new WordView(activity, word, 25, this::onAction);
 
+        View nameView = activity.findViewById(R.id.view_name);
+        nameView.setOnClickListener((v) -> onHint());
         TextView titleView = activity.findViewById(R.id.view_title);
         titleView.setText(this.getTitle());
+        titleView.setOnClickListener((v) -> onHint());
         ImageView hintView = activity.findViewById(R.id.view_hint);
         hintView.setOnClickListener((v) -> onHint());
     }
