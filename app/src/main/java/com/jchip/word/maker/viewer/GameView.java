@@ -23,6 +23,7 @@ public class GameView {
 
         TextView titleView = activity.findViewById(R.id.view_title);
         titleView.setText(this.getTitle());
+        titleView.setOnClickListener((v) -> onHint());
         ImageView hintView = activity.findViewById(R.id.view_hint);
         hintView.setOnClickListener((v) -> onHint());
     }
