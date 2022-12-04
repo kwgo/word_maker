@@ -82,7 +82,6 @@ public class WordHelper {
         List<String> lines = new ArrayList<>();
         try {
             int id = context.getResources().getIdentifier("word_" + index, "raw", context.getPackageName());
-            Log.d("", "id=" + id);
             InputStream file = context.getResources().openRawResource(id);
             BufferedReader reader = new BufferedReader(new InputStreamReader(file));
             while (true) {

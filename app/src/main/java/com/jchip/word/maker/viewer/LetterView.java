@@ -106,8 +106,6 @@ public class LetterView {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         this.activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int size = Math.min(displayMetrics.widthPixels, displayMetrics.heightPixels);
-
-        Log.d("", "button size =" + (this.pxToDp(size / 3)));
         return Math.min(size / 3, this.dpToPx(120f));
     }
 }
