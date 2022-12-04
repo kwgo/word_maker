@@ -2,6 +2,11 @@ package com.jchip.word.maker.viewer;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,9 +28,8 @@ public class GameView {
 
         TextView titleView = activity.findViewById(R.id.view_title);
         titleView.setText(this.getTitle());
-        titleView.setOnClickListener((v) -> onHint());
-        ImageView hintView = activity.findViewById(R.id.view_hint);
-        hintView.setOnClickListener((v) -> onHint());
+        View nameView = activity.findViewById(R.id.view_name);
+        nameView.setOnClickListener((v) -> onHint());
     }
 
     private String getTitle() {

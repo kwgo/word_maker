@@ -2,6 +2,9 @@ package com.jchip.word.maker.viewer;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
