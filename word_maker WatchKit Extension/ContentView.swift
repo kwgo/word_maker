@@ -122,10 +122,6 @@ struct ContentView: View {
                 .resizable()
             
             VStack {
-                TitleView(content: self, view: self.view, word: self.word)
-                
-                Spacer()
-                
                 Group {
                     if "main" == self.view {
                         MainView(content: self)
@@ -142,8 +138,10 @@ struct ContentView: View {
     }
     
     func startView(view: String, word: String, resultWord: String = "") {
-        self.view = view
-        self.word = word
-        self.resultWord = resultWord
+        withAnimation {
+            self.view = view
+            self.word = word
+            self.resultWord = resultWord
+        }
     }
 }

@@ -18,6 +18,7 @@ struct ResultView: View {
         let hint = self.isHint()
         let count = hint ? self.word.count : self.resultWord.count
         VStack {
+            Spacer()
             Text(hint ? self.word : self.resultWord)
                 .frame(alignment: .center)
                 .font(Font.custom("Aldrich", size: count < 8 ? 36 : 32))
@@ -26,6 +27,7 @@ struct ResultView: View {
                 .lineLimit(2)
                 .padding(.top, 20)
             
+            Spacer()
             Image(success ? "game_success" : hint ? "game_hint" : "game_fail")
                 .renderingMode(.original)
                 .resizable()

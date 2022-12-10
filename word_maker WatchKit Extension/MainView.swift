@@ -10,9 +10,38 @@ import SwiftUI
 struct MainView: View {
     var content: ContentView
     
+    @State var fadeIn = false
+    
     var body: some View {
         VStack() {
+            HStack {
+                Text("Make")
+                    .font(Font.custom("Aldrich", size: 32))
+                    .foregroundColor(Color.titleColor)
+                    .padding(.leading, 12)
+                    .padding(.top, 6)
+                Spacer()
+            }
+            HStack {
+                Spacer()
+                Text("a Word")
+                    .font(Font.custom("Aldrich", size: 32))
+                    .foregroundColor(Color.detailColor)
+                    .lineLimit(1)
+                    .padding(.trailing, 12)
+                    .padding(.top, -16)
+                    .padding(.bottom, -12)
+            }
+            
+            Spacer()
+            
             WordView(word: self.getShuffledIndex(), action: self.doAction)
+                .opacity(fadeIn ? 1 : 0)
+                .onAppear() {
+                    withAnimation(.easeIn(duration: 5.0)) {
+                        fadeIn = true
+                    }
+                }
         }
     }
     
@@ -35,6 +64,6 @@ struct MainView: View {
         letters.shuffle()
         return letters.joined(separator: "")
     }
-
+    
 }
 
