@@ -115,36 +115,20 @@ struct ContentView: View {
     @State var view = "main"
     @State var word = ""
     @State var resultWord = ""
-    @State var fadeIn = false
     
     var body: some View {
         GeometryReader { geometry in
-            let size = self.getUnitSize(geometry)
-            
+            let size = self.getUnitSize(geometry)            
             VStack {
-                Spacer()
-               
-                TitleView(content: self, view: self.view, word: self.word)
-                
-                Spacer()
-                
                 Group {
                     if "main" == self.view {
                         MainView(content: self, size: size)
-                            .opacity(fadeIn ? 1 : 0)
-                            .onAppear() {
-                                withAnimation(.easeIn(duration: 5.0)) {
-                                    fadeIn = true
-                                }
-                            }
                     } else if "game" == self.view {
                         GameView(content: self, word: self.word, size: size)
                     } else if "result" == self.view {
                         ResultView(content: self, word: self.word, resultWord: self.resultWord)
                     }
                 }
-            
-                Spacer()
             }
         }
         //.preferredColorScheme(.dark)
@@ -155,9 +139,11 @@ struct ContentView: View {
     }
     
     func startView(view: String, word: String, resultWord: String = "") {
-        self.view = view
-        self.word = word
-        self.resultWord = resultWord
+        withAnimation {
+            self.view = view
+            self.word = word
+            self.resultWord = resultWord
+        }
     }
     
     func getUnitSize(_ geometry : GeometryProxy) -> CGFloat {

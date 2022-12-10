@@ -17,7 +17,7 @@ struct ResultView: View {
     var body: some View {
         let success = self.isSuccess()
         let hint = self.isHint()
-        VStack {
+        VStack() {
             Spacer()
             Text(hint ? self.word : self.resultWord)
                 .font(Font.custom("Aldrich", size: 66))
@@ -26,9 +26,8 @@ struct ResultView: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .lineLimit(2)
                 .multilineTextAlignment(.center)
-            HStack {
-                Spacer()
-            }
+                .frame(maxWidth: .infinity, alignment: .center)
+         
             Spacer()
             Image(success ? "game_success" : hint ? "game_hint" : "game_fail")
                 .renderingMode(.original)
