@@ -31,9 +31,11 @@ struct WordView: View {
                             .id(UUID())
                             .onTapGesture(count: 1) {
                                 if(!self.tappedStatus[index] && !letters[index].trim().isEmpty) {
-                                    self.tappedStatus[index] = true
-                                    self.tappedColors[index] = self.colors[self.colorIndex]
-                                    self.colorIndex = (self.colorIndex + 1) % 9
+                                    withAnimation {
+                                        self.tappedStatus[index] = true
+                                        self.tappedColors[index] = self.colors[self.colorIndex]
+                                        self.colorIndex = (self.colorIndex + 1) % 9
+                                    }
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                                         self.action(letters[index])
                                     }

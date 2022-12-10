@@ -45,14 +45,17 @@ struct GameView: View {
                     .padding(.leading, 0)
                     .padding(.top, 0)
                     .padding(.bottom, 0)
-                
+                    .onTapGesture(count: 1) {
+                        self.doAction(letter: "[HINT]")
+                    }
+
                 Image(systemName: "lightbulb.circle")
                     .font(.system(size: 24, weight: .regular))
                     .foregroundColor(Color.titleColor)
                     .padding(.leading, 2)
                     .padding(.top, -6)
                     .onTapGesture(count: 1) {
-                        self.content.startView(view: "result", word: self.word, resultWord: "[HINT]")
+                        self.doAction(letter: "[HINT]")
                     }
             }
 

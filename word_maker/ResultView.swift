@@ -13,7 +13,9 @@ struct ResultView: View {
     
     var word: String
     var resultWord: String
-    
+        
+    @State var fadeIn = false
+
     var body: some View {
         let success = self.isSuccess()
         let hint = self.isHint()
@@ -35,6 +37,12 @@ struct ResultView: View {
                 .frame(width: 100, height: 100, alignment: .center)
                 .onTapGesture(count: 1) {
                     self.onContinue(success: success)
+                }
+                .opacity(fadeIn ? 1 : 0.1)
+                .onAppear() {
+                    withAnimation(.easeIn(duration: 1.8)) {
+                        fadeIn = true
+                    }
                 }
             Spacer()
         }
