@@ -4,14 +4,14 @@ plugins {
 
 android {
     namespace 'com.jchip.word.maker'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.jchip.word.maker"
         minSdk 22
-        targetSdk 32
-        versionCode 3
-        versionName "1.3"
+        targetSdk 33
+        versionCode 4
+        versionName "1.4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
